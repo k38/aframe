@@ -36,13 +36,20 @@ function DOMContentLoaded(){
 
     var barEl = document.querySelector('#bar');
     var fooEl = document.querySelector('#foo');
-    // console.log(barEl.object3D.getWorldPosition(new THREE.Vector3()));
-    // console.log(barEl.object3D.getWorldPosition(new THREE.Vector3(0, 0, 0)));
-    console.log(fooEl.object3D.getWorldPosition(new THREE.Vector3(0, 0, 0)));
-    // console.log(barEl.object3D.getWorldQuaternion(new THREE.Quaternion()));
 
-    console.log(barEl.object3D.getWorldPosition(new THREE.Vector3(0, 0, 0)));
+    console.log(fooEl.object3D.getWorldPosition(new THREE.Vector3(0, 0, 0)));   // a {x: 1, y: 2, z: 3}
+    console.log(fooEl.object3D.getWorldDirection(new THREE.Vector3(0, 0, 0)));   // {x: 0, y: 0, z: 1}
+    console.log(fooEl.object3D.getWorldQuaternion(new THREE.Quaternion()));   // i {_x: 0, _y: 0, _z: 0, _w: 1}
+    console.log(fooEl.object3D.getWorldScale(new THREE.Vector3(0, 0, 0)));   // a {x: 1, y: 1, z: 1}
+
+    console.log("---");
+    console.log(barEl.object3D.getWorldPosition(new THREE.Vector3(0, 0, 0)));   // a {x: 3, y: 5, z: 7}
+    console.log(barEl.object3D.getWorldDirection(new THREE.Vector3(0, 0, 0)));   // a {x: 0, y: 0, z: 1}
+    console.log(barEl.object3D.getWorldQuaternion(new THREE.Quaternion()));   // i {_x: 0, _y: 0, _z: 0, _w: 1}
+    console.log(barEl.object3D.getWorldScale(new THREE.Vector3(0, 0, 0)));   // a {x: 1, y: 1, z: 1}
+
+    console.log("---");
     var worldToLocal = new THREE.Matrix4().getInverse(fooEl.object3D.matrixWorld);
     barEl.object3D.applyMatrix(worldToLocal);
-    console.log(barEl.object3D.getWorldPosition(new THREE.Vector3(0, 0, 0)));
+    console.log(barEl.object3D.getWorldPosition(new THREE.Vector3(0, 0, 0)));   // a {x: 2, y: 3, z: 4}
 }
