@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>_template</title>
+  <!-- <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> -->
+  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+  <script src="helloWorld.js"></script>
+  <script src="log.js"></script>
+  <script src="box.js"></script>
+  <script src="follow.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <!-- <a-entity hello-world></a-entity> -->
+    <!-- <a-entity log="event: anEvent; message: Hello, Metaverse!"></a-entity> -->
+    <!-- <a-entity log__helloworld="message: Hello, World!", log__metaverse="message: Hello, Metaverse!"></a-entity> -->
+    <a-entity box="width: 0.5; height: 0.25; depth: 1; color: orange;" position="0 0 -5" id="b" follow="target: #a; speed: 10;"></a-entity>
+    <a-entity box="width: 0.5; height: 0.25; depth: 1; color: red;" position="5 0 -5" id="a"></a-entity>
+  </a-scene>
+</body>
+
+</html>
