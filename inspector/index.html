@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>_template</title>
+  <!-- <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> -->
+  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+  <!-- <script src="https://unpkg.com/aframe-debug-cursor-component/dist/aframe-debug-cursor-component.min.js"></script>  -->
+  <script src="https://unpkg.com/aframe-motion-capture-components/dist/aframe-motion-capture-components.min.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <!-- <a-scene debug-controller>
+    <a-box color="green" position="0 0 -5"></a-box>
+    <a-entity id="mouseCursor" cursor="rayOrigin: mouse" debug-cursor></a-entity>
+    <a-entity id="primaryHand"></a-entity>
+    <a-entity id="secondaryHand"></a-entity>
+  </a-scene> -->
+  <!-- <a-scene avatar-recorder avatar-replayer>
+    <a-entity id="leftHand" hand-controls="left"></a-entity>
+    <a-entity id="rightHand" hand-controls="right"></a-entity>
+  </a-scene> -->
+  <a-scene avatar-recorder>
+      <a-box color="green" position="0 0 -5"></a-box>
+      <a-entity id="controller1" hand-controls></a-entity>
+      <a-entity id="controller2" hand-controls></a-entity>
+    </a-scene>
+</body>
+
+</html>
