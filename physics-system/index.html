@@ -7,15 +7,33 @@
   <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
   <!-- <script src="index.js"></script> -->
   <script>
-    // document.addEventListener('DOMContentLoaded', DOMContentLoaded);
+    document.addEventListener('DOMContentLoaded', DOMContentLoaded);
     function DOMContentLoaded(){
-        const ball = document.querySelector("#ball");
-        const v = new THREE.Vector3(0, 2, -1);
-        // const v = new THREE.Vector3(0, 2, -5);
-        // const v = new THREE.Vector3(0, 2, -10);
-        // const v = new THREE.Vector3(0, 2, -20);
-        ball.setAttribute("velocity", v);
+      const scene = document.querySelector("a-scene");
+      const ball = createBall();
+
+      scene.appendChild(ball);
     }
+    function createBall() {
+      const v = new THREE.Vector3(0, 2, -10);
+      const ball = document.createElement("a-sphere");
+      ball.setAttribute("id", "ball");
+      ball.setAttribute("color", "navy");
+      ball.setAttribute("position", "0 0.5 -3");
+      ball.setAttribute("radius", "0.2");
+      ball.setAttribute("dynamic-body", {shape: "auto"});
+      ball.setAttribute("velocity", v);
+      return ball;
+    }
+    // function DOMContentLoaded(){
+    //     // console.log("DOMContentLoaded");
+    //     const ball = document.querySelector("#ball");
+    //     // const v = new THREE.Vector3(0, 2, -1);
+    //     // const v = new THREE.Vector3(0, 2, -5);
+    //     const v = new THREE.Vector3(0, 2, -10);
+    //     // const v = new THREE.Vector3(0, 2, -20);
+    //     ball.setAttribute("velocity", v);
+    // }
   </script>
 </head>
 
@@ -31,7 +49,7 @@
       <a-entity gltf-model="#pin" dynamic-body="shape: auto; linearDamping: 0.01; angularDamping: 0.01; mass: 5" scale="2 2 2" position="0.2 0 -18.2"></a-entity>
       <a-entity gltf-model="#pin" dynamic-body="shape: auto; linearDamping: 0.01; angularDamping: 0.01; mass: 5" scale="2 2 2" position="-0.2 0 -18.2"></a-entity>
 
-      <a-sphere id="ball" color="navy" dynamic-body="shape: auto; linearDamping: 0.01; angularDamping: 0.01; mass: 5" position="0 0.5 -3" radius="0.2"></a-sphere>
+      <!-- <a-sphere id="ball" color="navy" dynamic-body="shape: auto; linearDamping: 0.01; angularDamping: 0.01; mass: 5" position="0 0.5 -3" radius="0.2"></a-sphere> -->
   </a-scene>
 </body>
 
