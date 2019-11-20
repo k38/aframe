@@ -25,7 +25,7 @@
       return ball;
     }
     function addForce(ball) {
-      const v = new THREE.Vector3(0, 0, -50);
+      const v = new THREE.Vector3(0, 0, -20);
       const p = ball.object3D.position;
       ball.body.applyImpulse(
         new CANNON.Vec3(v.x, v.y, v.z),
@@ -46,7 +46,7 @@
       <a-entity gltf-model="#pin" dynamic-body="shape: auto; linearDamping: 0.01; angularDamping: 0.01; mass: 5" scale="2 2 2" position="0.2 0 -18.2"></a-entity>
       <a-entity gltf-model="#pin" dynamic-body="shape: auto; linearDamping: 0.01; angularDamping: 0.01; mass: 5" scale="2 2 2" position="-0.2 0 -18.2"></a-entity>
   </a-scene>
-  <script></script><!-- この行がないとエラーがでる "Cannot read property 'systems' of null" -->
+  <script></script>
 </body>
 
 </html>
