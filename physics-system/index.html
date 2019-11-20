@@ -14,7 +14,6 @@
       const ball = createBall(scene);
       scene.appendChild(ball);
       ball.addEventListener("body-loaded", function(e){
-        console.log("body-loaded");
         addForce(this);
       });
     }
@@ -23,7 +22,7 @@
       const ball = document.createElement("a-sphere");
       ball.setAttribute("id", "ball");
       ball.setAttribute("color", "#2c2c2c");
-      ball.setAttribute("position", "0 0.05 0");
+      ball.setAttribute("position", "0 0.05 -3");
       ball.setAttribute("radius", "0.2");
       ball.setAttribute("dynamic-body", {shape: "auto"});
       // ball.setAttribute("velocity", v);
