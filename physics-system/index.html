@@ -12,19 +12,30 @@
     function DOMContentLoaded(){
       const scene = document.querySelector("a-scene");
       const ball = createBall(scene);
-
       scene.appendChild(ball);
+      ball.addEventListener("body-loaded", function(e){
+        console.log("body-loaded");
+        addForce(this);
+      });
     }
     function createBall(parent) {
-      const v = new THREE.Vector3(0, 2, -10);
+      // const v = new THREE.Vector3(0, 2, -10);
       const ball = document.createElement("a-sphere");
       ball.setAttribute("id", "ball");
       ball.setAttribute("color", "navy");
       ball.setAttribute("position", "0 0.5 -3");
       ball.setAttribute("radius", "0.2");
       ball.setAttribute("dynamic-body", {shape: "auto"});
-      ball.setAttribute("velocity", v);
+      // ball.setAttribute("velocity", v);
       return ball;
+    }
+    function addForce(ball) {
+      const v = new THREE.Vector3(0, 0, -50);
+      const p = ball.object3D.position;
+      ball.body.applyImpulse(
+        new CANNON.Vec3(v.x, v.y, v.z),
+        new CANNON.Vec3(p.x, p.y, p.z)
+      );
     }
     // setTimeout(()=>{
     //   DOMContentLoaded();
