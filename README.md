@@ -17,6 +17,7 @@
         - [velocity_30](https://k38.github.io/aframe/physics-system/velocity_30.html)
     - shape(ball)
         - [ball_shape_auto](https://k38.github.io/aframe/physics-system/ball_shape_auto.html) [debug](https://k38.github.io/aframe/physics-system/ball_shape_auto_debug.html)
+        - [ball_shape_primitive](https://k38.github.io/aframe/physics-system/ball_shape_primitive.html) [debug](https://k38.github.io/aframe/physics-system/ball_shape_primitive_debug.html)
         - [ball_shape_sphere](https://k38.github.io/aframe/physics-system/ball_shape_sphere.html) [debug](https://k38.github.io/aframe/physics-system/ball_shape_sphere_debug.html)
         - [ball_shape_sphere_radius_1](https://k38.github.io/aframe/physics-system/ball_shape_sphere_radius_1.html) [debug](https://k38.github.io/aframe/physics-system/ball_shape_sphere_radius_1_debug.html)
         - [ball_shape_sphere_radius_20](https://k38.github.io/aframe/physics-system/ball_shape_sphere_radius_20.html) [debug](https://k38.github.io/aframe/physics-system/ball_shape_sphere_radius_20_debug.html)
