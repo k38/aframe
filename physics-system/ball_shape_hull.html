@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>physics-system</title>
+  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', DOMContentLoaded);
+    function DOMContentLoaded(){
+      const scene = document.querySelector("a-scene");
+      const ball = createBall(scene);
+      scene.appendChild(ball);
+      ball.addEventListener("body-loaded", function(e){
+        addForce(this);
+      });
+    }
+    function createBall(parent) {
+      const ball = document.createElement("a-sphere");
+      ball.setAttribute("id", "ball");
+      ball.setAttribute("color", "#2c2c2c");
+      ball.setAttribute("position", "0 0.05 -3");
+      ball.setAttribute("radius", "0.2");
+      ball.setAttribute("dynamic-body", {
+        shape: "hull",
+      });
+      return ball;
+    }
+    function addForce(ball) {
+      const v = new THREE.Vector3(0, 0, -80);
+      const p = ball.object3D.position;
+      ball.body.applyImpulse(
+        new CANNON.Vec3(v.x, v.y, v.z),
+        new CANNON.Vec3(p.x, p.y, p.z)
+      );
+    }
+  </script>
+</head>
+
+<body>
+  <a-scene physics="debug: false" background="color: #f5f5f5;">
+  <!-- <a-scene physics="debug: true" background="color: #f5f5f5;"> -->
+    <a-assets>
+      <a-asset-item id="pin" src="model/bowling_pin/scene.gltf"></a-asset-item>
+    </a-assets>
+    <a-camera position="0 0.2 0" fov="30" far="100" zoom="1.2"></a-camera>
+    <a-plane color="#c67e26" width="3" height="25" position="0 -1 -15" rotation="-90 0 0" static-body></a-plane>
+    <a-entity gltf-model="#pin" dynamic-body="shape: auto; linearDamping: 0.01; angularDamping: 0.01; mass: 5" scale="2 2 2" position="0 0 -18"></a-entity>
+    <a-entity gltf-model="#pin" dynamic-body="shape: auto; linearDamping: 0.01; angularDamping: 0.01; mass: 5" scale="2 2 2" position="0.2 0 -18.2"></a-entity>
+    <a-entity gltf-model="#pin" dynamic-body="shape: auto; linearDamping: 0.01; angularDamping: 0.01; mass: 5" scale="2 2 2" position="-0.2 0 -18.2"></a-entity>
+  </a-scene>
+  <script></script>
+</body>
+
+</html>
