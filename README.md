@@ -29,3 +29,9 @@
 
         - [ball_shape_mesh](https://k38.github.io/aframe/physics-system/ball_shape_mesh.html) [debug](https://k38.github.io/aframe/physics-system/ball_shape_mesh_debug.html)
         - [ball_shape_none](https://k38.github.io/aframe/physics-system/ball_shape_none.html) [debug](https://k38.github.io/aframe/physics-system/ball_shape_none_debug.html)
+    - mass
+        - [ball_mass_1](https://k38.github.io/aframe/physics-system/ball_mass_1.html)
+        - [ball_mass_50](https://k38.github.io/aframe/physics-system/ball_mass_50.html)
+        - [ball_mass_100](https://k38.github.io/aframe/physics-system/ball_mass_100.html)
+        - [ball_mass_150](https://k38.github.io/aframe/physics-system/ball_mass_150.html)
+
