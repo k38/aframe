@@ -34,4 +34,9 @@
         - [ball_mass_50](https://k38.github.io/aframe/physics-system/ball_mass_50.html)
         - [ball_mass_100](https://k38.github.io/aframe/physics-system/ball_mass_100.html)
         - [ball_mass_150](https://k38.github.io/aframe/physics-system/ball_mass_150.html)
-
+    - linearDamping
+        - [ball_linear_001](https://k38.github.io/aframe/physics-system/ball_linear_001.html)
+        - [ball_linear_1](https://k38.github.io/aframe/physics-system/ball_linear_1.html)
+        - [ball_linear_099](https://k38.github.io/aframe/physics-system/ball_linear_099.html)
+        - [ball_linear_00001](https://k38.github.io/aframe/physics-system/ball_linear_00001.html)
+        - [ball_linear_0](https://k38.github.io/aframe/physics-system/ball_linear_0.html)
