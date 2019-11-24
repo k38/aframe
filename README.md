@@ -48,13 +48,11 @@
             - [ball_angular_0](https://k38.github.io/aframe/physics-system/ball_angular_0.html)
     - pin
         - shape
-        - [pin_shape_auto](https://k38.github.io/aframe/physics-system/pin_shape_auto.html)
-        - [pin_shape_primitive](https://k38.github.io/aframe/physics-system/pin_shape_primitive.html)
-        - [pin_shape_box](https://k38.github.io/aframe/physics-system/pin_shape_box.html)
-
-        - [pin_shape_hull](https://k38.github.io/aframe/physics-system/pin_shape_hull.html)
-        - [pin_shape_mesh](https://k38.github.io/aframe/physics-system/pin_shape_mesh.html)
-        - [pin_shape_none](https://k38.github.io/aframe/physics-system/pin_shape_none.html)
-
-        - [pin_shape_sphere](https://k38.github.io/aframe/physics-system/pin_shape_sphere.html)
-        - [pin_shape_cylinder](https://k38.github.io/aframe/physics-system/pin_shape_cylinder.html)
+            - [pin_shape_auto](https://k38.github.io/aframe/physics-system/pin_shape_auto.html)
+            - [pin_shape_primitive](https://k38.github.io/aframe/physics-system/pin_shape_primitive.html)
+            - [pin_shape_box](https://k38.github.io/aframe/physics-system/pin_shape_box.html)
+            - [pin_shape_hull](https://k38.github.io/aframe/physics-system/pin_shape_hull.html)
+            - [pin_shape_mesh](https://k38.github.io/aframe/physics-system/pin_shape_mesh.html)
+            - [pin_shape_none](https://k38.github.io/aframe/physics-system/pin_shape_none.html)
+            - [pin_shape_sphere](https://k38.github.io/aframe/physics-system/pin_shape_sphere.html)
+            - [pin_shape_cylinder](https://k38.github.io/aframe/physics-system/pin_shape_cylinder.html)
