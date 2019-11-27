@@ -56,3 +56,13 @@
             - [pin_shape_none](https://k38.github.io/aframe/physics-system/pin_shape_none.html)
             - [pin_shape_sphere](https://k38.github.io/aframe/physics-system/pin_shape_sphere.html)
             - [pin_shape_cylinder](https://k38.github.io/aframe/physics-system/pin_shape_cylinder.html)
+        - model
+            - [pin_model_1](https://k38.github.io/aframe/physics-system/pin_model_1.html)
+            - [pin_model_2](https://k38.github.io/aframe/physics-system/pin_model_2.html)
+            - [pin_model_3](https://k38.github.io/aframe/physics-system/pin_model_3.html)
+            - [pin_model_4](https://k38.github.io/aframe/physics-system/pin_model_4.html)
+            - [pin_model_5](https://k38.github.io/aframe/physics-system/pin_model_5.html)
+        - shape - localpos
+            - [pin_model_localpos](https://k38.github.io/aframe/physics-system/pin_model_localpos.html)
+            - [pin_model_localpos_bowl](https://k38.github.io/aframe/physics-system/pin_model_localpos_bowl.html)
+            - [pin_model_localpos_bowl_debug](https://k38.github.io/aframe/physics-system/pin_model_localpos_bowl_debug.html)
