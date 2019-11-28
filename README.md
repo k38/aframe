@@ -66,3 +66,6 @@
             - [pin_model_localpos](https://k38.github.io/aframe/physics-system/pin_model_localpos.html)
             - [pin_model_localpos_bowl](https://k38.github.io/aframe/physics-system/pin_model_localpos_bowl.html)
             - [pin_model_localpos_bowl_debug](https://k38.github.io/aframe/physics-system/pin_model_localpos_bowl_debug.html)
+        - shape - compound
+            - [pin_shape_compound_1](https://k38.github.io/aframe/physics-system/pin_shape_compound_1.html)
+            - [pin_shape_compound_2](https://k38.github.io/aframe/physics-system/pin_shape_compound_2.html)
