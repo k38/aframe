@@ -69,3 +69,17 @@
         - shape - compound
             - [pin_shape_compound_1](https://k38.github.io/aframe/physics-system/pin_shape_compound_1.html)
             - [pin_shape_compound_2](https://k38.github.io/aframe/physics-system/pin_shape_compound_2.html)
+        - shape - compound 2
+            - [pin_shape_compound_box](https://k38.github.io/aframe/physics-system/pin_shape_compound_box.html)
+            - [pin_shape_compound_box_halfExtents](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_halfExtents.html)
+            - [pin_shape_compound_box_offset](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_offset.html)
+            - [pin_shape_compound_box_orientation](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_orientation.html)
+            - [pin_shape_compound_box_orientation_01](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_orientation_01.html)
+            - [pin_shape_compound_box_scale_1](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_scale_1.html)
+            - [pin_shape_compound_box_props](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_props.html)
+            - [pin_shape_compound_box_props_1](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_props_1.html)
+            - [pin_shape_compound_cylinder](https://k38.github.io/aframe/physics-system/pin_shape_compound_cylinder.html)
+            - [pin_shape_compound_cylinder_props](https://k38.github.io/aframe/physics-system/pin_shape_compound_cylinder_props.html)
+            - [pin_shape_compound_cylinder_props_1](https://k38.github.io/aframe/physics-system/pin_shape_compound_cylinder_props_1.html)
+            - [pin_shape_compound_sphere](https://k38.github.io/aframe/physics-system/pin_shape_compound_sphere.html)
+            - [pin_shape_compound_sphere_radius](https://k38.github.io/aframe/physics-system/pin_shape_compound_sphere_radius.html)
