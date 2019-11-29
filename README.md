@@ -81,6 +81,7 @@
             - [pin_shape_compound_cylinder](https://k38.github.io/aframe/physics-system/pin_shape_compound_cylinder.html)
             - [pin_shape_compound_cylinder_props](https://k38.github.io/aframe/physics-system/pin_shape_compound_cylinder_props.html)
             - [pin_shape_compound_cylinder_props_1](https://k38.github.io/aframe/physics-system/pin_shape_compound_cylinder_props_1.html)
+            - [pin_shape_compound_cylinder_props_2](https://k38.github.io/aframe/physics-system/pin_shape_compound_cylinder_props_2.html)
             - [pin_shape_compound_sphere](https://k38.github.io/aframe/physics-system/pin_shape_compound_sphere.html)
             - [pin_shape_compound_sphere_radius](https://k38.github.io/aframe/physics-system/pin_shape_compound_sphere_radius.html)
             - [pin_shape_compound_sphere_radius_1](https://k38.github.io/aframe/physics-system/pin_shape_compound_sphere_radius_1.html)
