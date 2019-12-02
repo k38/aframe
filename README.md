@@ -78,6 +78,7 @@
             - [pin_shape_compound_box_offset_z](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_offset_z.html)
             - [pin_shape_compound_box_orientation](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_orientation.html)
             - [pin_shape_compound_box_orientation_01](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_orientation_01.html)
+            - [pin_shape_compound_box_orientation_02](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_orientation_02.html)
             - [pin_shape_compound_box_scale_1](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_scale_1.html)
             - [pin_shape_compound_box_props](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_props.html)
             - [pin_shape_compound_box_props_1](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_props_1.html)
