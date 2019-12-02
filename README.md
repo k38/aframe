@@ -72,7 +72,10 @@
         - shape - compound 2
             - [pin_shape_compound_box](https://k38.github.io/aframe/physics-system/pin_shape_compound_box.html)
             - [pin_shape_compound_box_halfExtents](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_halfExtents.html)
-            - [pin_shape_compound_box_offset](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_offset.html)
+            - [pin_shape_compound_box_offset_scale_1](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_offset_scale_1.html)
+            - [pin_shape_compound_box_offset_y](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_offset_y.html)
+            - [pin_shape_compound_box_offset_x](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_offset_x.html)
+            - [pin_shape_compound_box_offset_z](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_offset_z.html)
             - [pin_shape_compound_box_orientation](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_orientation.html)
             - [pin_shape_compound_box_orientation_01](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_orientation_01.html)
             - [pin_shape_compound_box_scale_1](https://k38.github.io/aframe/physics-system/pin_shape_compound_box_scale_1.html)
