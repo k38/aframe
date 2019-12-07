@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>physics-system</title>
+  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+  <!-- <script src="lib/aframe.min.js"></script>
+  <script src="lib/aframe-physics-system.min.js"></script> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', DOMContentLoaded);
+    function DOMContentLoaded(){
+      setPinProp();
+
+    //   const scene = document.querySelector("a-scene");
+    //   const ball = createBall(scene);
+    //   scene.appendChild(ball);
+    //   ball.addEventListener("body-loaded", function(e){
+    //     addForce(this);
+    //   });
+    }
+    function setPinProp() {
+      const pins = document.querySelectorAll(".pin");
+      const attr = {
+        shape: "cylinder"
+      };
+      // const attr = {
+      //   shape: "none",
+      // };
+      // const main = {
+      //   shape: "cylinder",
+      //   height: 0.12,
+      //   radiusTop: 0.045,
+      //   radiusBottom: 0.06,
+      //   offset: "0 0.06 0"
+      // };
+      // const handle = {
+      //   shape: "cylinder",
+      //   height: 0.1,
+      //   radiusTop: 0.06,
+      //   radiusBottom: 0.03,
+      //   offset: "0 0.17 0"
+      // };
+      // const handle2 = {
+      //   shape: "cylinder",
+      //   height: 0.10,
+      //   radiusTop: 0.03,
+      //   radiusBottom: 0.032,
+      //   offset: "0 0.27 0"
+      // };
+      pins.forEach((e)=>{
+        e.setAttribute("dynamic-body", attr);
+        // e.setAttribute("shape__main", main);
+        // e.setAttribute("shape__handle", handle);
+        // e.setAttribute("shape__handle2", handle2);
+      });
+    }
+    function createBall(parent) {
+      const ball = document.createElement("a-sphere");
+      ball.setAttribute("id", "ball");
+      ball.setAttribute("color", "#2c2c2c");
+      ball.setAttribute("position", "0 0.05 -3");
+      ball.setAttribute("radius", "0.2");
+      ball.setAttribute("dynamic-body", {
+        angularDamping: 0.0001,
+        linearDamping: 0.0001,
+      });
+      return ball;
+    }
+    function addForce(ball) {
+      const v = new THREE.Vector3(0, 0, -80);
+      const p = ball.object3D.position;
+      ball.body.applyImpulse(
+        new CANNON.Vec3(v.x, v.y, v.z),
+        new CANNON.Vec3(p.x, p.y, p.z)
+      );
+    }
+  </script>
+</head>
+
+<body>
+  <a-scene physics="debug: true" background="color: #f5f5f5;">
+    <a-assets>
+      <!-- <a-asset-item id="pin" src="model/bowling_pin/scene.gltf"></a-asset-item> -->
+      <a-asset-item id="bowling-pin" src="model/bowling_pin_ex/bowling-pin.obj"></a-asset-item>
+      <a-asset-item id="bowling-pin-mtl" src="model/bowling_pin_ex/bowling-pin.mtl"></a-asset-item>
+    </a-assets>
+    <a-camera position="0 0.2 0" fov="30" far="100" zoom="1.2"></a-camera>
+    <a-plane color="#c67e26" width="3" height="25" position="0 -1 -15" rotation="-90 0 0" static-body></a-plane>
+    <!-- <a-entity class="pin" gltf-model="#pin" scale="2 2 2" position="0 0 -7"></a-entity> -->
+    <a-obj-model class="pin" color="grey" scale="0.4 0.4 0.4" obj-model="obj: #bowling-pin; mtl: #bowling-pin-mtl" position="0 0 -7" mass="0.5"></a-obj-model>
+  </a-scene>
+  <script></script>
+</body>
+
+</html>
