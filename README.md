@@ -100,3 +100,5 @@
             - [pin_shape_comp_multi_bowl_3](https://k38.github.io/aframe/physics-system/pin_shape_comp_multi_bowl_3.html)
             - [pin_shape_comp_multi_bowl_4](https://k38.github.io/aframe/physics-system/pin_shape_comp_multi_bowl_4.html)
             - [pin_shape_comp_multi_bowl_5](https://k38.github.io/aframe/physics-system/pin_shape_comp_multi_bowl_5.html)
+    - lane
+        - [lane](https://k38.github.io/aframe/physics-system/lane.html)
