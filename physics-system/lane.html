@@ -44,7 +44,8 @@
     function createBall(parent) {
       const ball = document.createElement("a-sphere");
       ball.setAttribute("id", "ball");
-      ball.setAttribute("color", "#004c4c");
+      ball.setAttribute("color", "#052625");
+      ball.setAttribute("emissive", "#1f1d1b");
       ball.setAttribute("position", "0 0.02 -3");
       ball.setAttribute("radius", "0.2");
       ball.setAttribute("dynamic-body", {
@@ -72,8 +73,8 @@
       <a-asset-item id="pin" src="model/bowling_pin/scene.gltf"></a-asset-item>
       <a-asset-item id="fieldModel" src="model/bowling_alley_mozilla_hubs_room/scene.gltf"></a-asset-item>
     </a-assets>
-    <a-light type="ambient" intensity="1.0" position="0 6 0" color="#00ffff"></a-light>
-    <a-light type="directional" intensity="2.5" position="10 10 10"></a-light>
+    <a-entity light="type: ambient; intensity: 0.8; color: #c1fff6; groundColor: #dcf1ff; decay: 11.68; distance: 12.51; shadowBias: 5.85; shadowCameraFar: 0; shadowCameraFov: 20; shadowCameraBottom: -19.07; shadowRadius: 100"></a-entity>
+    <a-light type="directional" intensity="3.8" position="-10 10 10" color="#eeffff" light="intensity: 4"></a-light>
     <a-camera position="0 1 0" fov="30" far="100" zoom="0.8"></a-camera>
     <a-entity id="lane" width="2" height="25" position="0 -1 -15" rotation="-90 0 0"></a-entity>
     <a-entity class="pin" position="0 0 -18.0"><a-entity gltf-model="#pin" scale="2 2 2" position="0 -0.34 0"></a-entity></a-entity>
