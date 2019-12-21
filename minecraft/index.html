@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>minecraft</title>
+  <!-- <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> -->
+  <!-- <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script> -->
+  <!-- <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script> -->
+  <script src="lib/aframe.min.js"></script>
+  <script src="components/random-color.js"></script>
+  <script src="components/snap.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+      <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
+      <a-mixin id="voxel"
+        random-color depth="0.5" height="0.5" shader="flat" width="0.5"
+        snap="offset: 0.25 0.25 0.25; snap: 0.5 0.5 0.5"
+      ></a-mixin>
+    </a-assets>
+    <a-camera position="0 1 0" zoom="0.8"></a-camera>
+    <!-- <a-entity vive-controls="hand: left"></a-entity>
+    <a-entity vive-controls="hand: right"></a-entity>
+    <a-entity oculus-touch-controls="hand: left"></a-entity>
+    <a-entity oculus-touch-controls="hand: right"></a-entity> -->
+    <a-entity id="teleHand" hand-controls="left"></a-entity>
+    <a-entity id="blockHand" hand-controls="right"></a-entity>
+  
+    <a-cylinder id="ground" src="#groundTexture" radius="32" height="0.1"></a-cylinder>
+    <a-sky id="background" src="#skyTexture" theta-length="90" radius="30"></a-sky>
+    <a-box mixin="voxel" position="-1 0 -2"></a-box>
+    <a-box mixin="voxel" position="0 0 -2"></a-box>
+    <a-box mixin="voxel" position="0 1 -2">
+      <a-animation attribute="rotation" to="0 360 0" repeat="indefinite"></a-animation>
+    </a-box>
+    <a-box mixin="voxel" position="1 0 -2"></a-box>
+    <!-- <a-box
+      random-color depth="0.5" height="0.5" shader="flat" width="0.5" position="0 0.25 -3"
+      snap="offset: 0.25 0.25 0.25; snap: 0.5 0.5 0.5"
+      ></a-box> -->
+    <!-- <a-entity geometry="primitive: box; depth: 0.5; height: 0.5; width 0.5"
+          position="0 0.25 -3"
+          material="color: red; shader: standard"></a-entity> -->
+  </a-scene>
+</body>
+
+</html>
