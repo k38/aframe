@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>entity</title>
+  <!-- <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> -->
+  <!-- <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script> -->
+  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <!-- <a-entity geometry="primitive: box" material="color: red"></a-entity> -->
+    <!-- <a-entity geometry="primitive: box" material="color: red" light="type: point; strength: 2.0"></a-entity> -->
+    <!-- <a-entity geometry="primitive: box" material="color: red" light="type: point; intensity: 2.0"></a-entity> -->
+    <a-entity geometry="primitive: box" material="color: red; metalness: 0.1" position="0 0 -3" animation="property: rotation; to: 0 360 0; startEvents: rotate"></a-entity>
+    <a-camera><a-cursor></a-cursor></a-camera>
+  </a-scene>
+</body>
+
+</html>
