@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>_template</title>
+  <!-- <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> -->
+  <!-- <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script> -->
+  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <!-- <a-assets timeout="1">
+      <a-asset-item id="field" src="models/dragon_gate_inn_with_neon/scene.gltf"></a-asset-item>
+    </a-assets> -->
+    <a-assets timeout="1">
+      <!-- <a-asset-item id="field" src="models/dragon_gate_inn_with_neon/scene.gltf"></a-asset-item> -->
+      <a-asset-item id="field" response-type="arraybuffer" src="models/dragon_gate_inn_with_neon/scene.gltf"></a-asset-item>
+    </a-assets>
+    <a-entity gltf-model="#field" rotation="0 0 0" position="-5 -7.3 -12" scale="7 7 7"></a-entity>
+  </a-scene>
+</body>
+
+</html>
