@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>mixins</title>
+  <!-- <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> -->
+  <!-- <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script> -->
+  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <!-- <a-mixin id="red" material="color: red"></a-mixin>
+      <a-mixin id="blue" material="color: blue"></a-mixin>
+      <a-mixin id="cube" geometry="primitive: box"></a-mixin> -->
+
+      <a-mixin id="box" geometry="primitive: box"></a-mixin>
+      <a-mixin id="tall" geometry="height: 10"></a-mixin>
+      <a-mixin id="wide" geometry="width: 10"></a-mixin>
+    </a-assets>
+
+    <!-- <a-entity mixin="red cube"></a-entity>
+    <a-entity mixin="blue cube"></a-entity> -->
+
+    <a-entity mixin="wide tall box" position="0 0 -10" geometry="depth: 2"></a-entity>
+  </a-scene>
+</body>
+
+</html>
