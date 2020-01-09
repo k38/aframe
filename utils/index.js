@@ -26,5 +26,45 @@ function DOMContentLoaded(){
         AFRAME.utils.deepEqual({a:1, b:{c: 3}}, {a:1, b:{c: 2}}),
         AFRAME.utils.diff({a:1, b:{c: 3}}, {a:1, b:{c: 3}}),
         AFRAME.utils.diff({a:1, b:{c: 3}}, {b:{c: 2}}),
+        AFRAME.utils.extend({a: 1}, {b: {c: 2}}),
+        AFRAME.utils.extend({a: 1}, {b: {c: 2}}, {d: 3}),
+        AFRAME.utils.extend({a: 1}, {a: {c: 2}}, {d: 3}),
+        AFRAME.utils.extendDeep({a: 1}, {b: {c: 2}}),
+        AFRAME.utils.extendDeep({a: 1}, {b: {c: 2}}, {d: 3}),
+        AFRAME.utils.extendDeep({a: 1}, {a: {c: 2}}, {d: 3}),
+        AFRAME.utils.device.checkHeadsetConnected(),
+        AFRAME.utils.device.isGearVR(),
+        AFRAME.utils.device.isOculusGo(),
+        AFRAME.utils.device.isMobile(),
+        AFRAME.utils.getUrlParameter('testing')
     ]);
+
+    // AFRAME.registerComponent('foo', {
+    //     init: function () {
+    //         // Set up throttling.
+    //         this.throttledFunction = AFRAME.utils.throttle(this.everySecond, 1000, this);
+    //     },
+    
+    //     everySecond: function () {
+    //         // Called every second.
+    //         console.log("A second passed.");
+    //     },
+    
+    //     tick: function (t, dt) {
+    //         this.throttledFunction();  // Called once a second.
+    //         console.log("A frame passed.");  // Called every frame.
+    //     },
+    // });
+
+    AFRAME.registerComponent('foo', {
+        init: function () {
+            // Set up the tick throttling.
+            this.tick = AFRAME.utils.throttleTick(this.tick, 500, this);
+        },
+
+        /**
+         * Tick function that will be wrapped to be throttled.
+         */
+        tick: function (t, dt) { }
+    });
 }
