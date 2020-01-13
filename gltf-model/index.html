@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>gltf-model</title>
+  <!-- <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> -->
+  <!-- <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script> -->
+  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <!-- <script src="lib/aframe.min.js"></script> -->
+  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
+  <!-- <script src="lib/draco/draco_decoder.js"></script> -->
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <!-- <a-asset-item id="cat" src="models/cat_walk/scene.gltf"></a-asset-item> -->
+      <a-asset-item id="cat" src="models/furry_cat_with_animations/scene.gltf"></a-asset-item>
+    </a-assets>
+    <a-entity position="-1 0 -2" gltf-model="#cat" animation-mixer="duration: 10;"></a-entity>
+  </a-scene>
+  <!-- <a-scene gltf-model="dracoDecoderPath: lib/draco;">
+    <a-entity position="-1 0 -2" gltf-model="url(models/bunny.drc)"></a-entity>
+  </a-scene> -->
+</body>
+
+</html>
