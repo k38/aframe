@@ -11,6 +11,11 @@
 - [ecs](https://k38.github.io/aframe/ecs/)
 - [360_gallery](https://k38.github.io/aframe/360_gallery/)
 
+- particle-system
+    - mushroom
+        - [mushroom_spores](https://k38.github.io/aframe/mushroom_spores/index.html)
+        - [mushroom_spores_fantasy](https://k38.github.io/aframe/mushroom_spores/fantasy.html)
+
 - physics-system
     - ball
         - velocity
