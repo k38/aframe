@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>sprite-particles-component</title>
+  <!-- <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> -->
+  <!-- <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script> -->
+  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-sprite-particles-component@^0.5.0/aframe-sprite-particles-component.js"></script>
+  <!-- <script src="lib/aframe.min.js"></script> -->
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <a-scene>
+      <a-gltf-model id="model" texture="assets/blob.png" scale="0.5 0.5 0.5" visible="false"></a-gltf-model>
+      <a-entity position="0 5 -5" sprite-particles="texture: assets/blob.png; velocity: .1 1 .1; acceleration: 0 -1 0..0 -2 0; color: red,yellow"></a-entity>
+      <a-entity position="3 3 -5" sprite-particles="texture: assets/blob.png; velocity: .1 1 .1; acceleration: 0 -1 0..3 -2 0; color: red,yellow"></a-entity>
+      <a-entity position="0 0 -5" sprite-particles="texture: assets/blob.png; radialVelocity: 1..2; color: red"></a-entity>
+  </a-scene>
+</body>
+
+</html>
