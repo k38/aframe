@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>particle system</title>
+  <!-- <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> -->
+  <!-- <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script> -->
+  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-particle-system-component@1.1.3/dist/aframe-particle-system-component.min.js"></script> 
+  <!-- <script src="lib/aframe.min.js"></script> -->
+  <!-- <script src="lib/aframe-particle-system-component.min.js"></script> -->
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <!-- <a-scene background="color: grey" stats> -->
+  <a-scene background="color: grey">
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 1;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.1;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 10;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 50;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 1; positionSpread: 10 10 10;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 1; positionSpread: 100 100 100;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 1; positionSpread: 1 1 1;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 1; positionSpread: 0 0 0;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 1; positionSpread: 5 5 5; type: 1;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 1; positionSpread: 5 5 5; type: 2;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 1; positionSpread: 5 5 5; type: 3;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 3; positionSpread: 5 5 5; rotationAxis: x;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 3; positionSpread: 5 5 5; rotationAxis: y;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 3; positionSpread: 5 5 5; rotationAxis: z;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 3; positionSpread: 5 5 5; rotationAxis: x; rotationAngle: 0;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 3; positionSpread: 5 5 5; rotationAxis: x; rotationAngle: 1;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 3; positionSpread: 5 5 5; rotationAxis: x; rotationAngle: 2;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 3; positionSpread: 5 5 5; rotationAxis: x; rotationAngle: 3;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 3; positionSpread: 5 5 5; rotationAxis: x; rotationAngle: 0; rotationAngleSpread: 0"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 3; positionSpread: 5 5 5; rotationAxis: x; rotationAngle: 0; rotationAngleSpread: 10"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 3; positionSpread: 5 5 5; rotationAxis: x; rotationAngle: 0; rotationAngleSpread: 100"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 3; positionSpread: 5 5 5; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 0"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 3; positionSpread: 5 5 5; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 10"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 3; positionSpread: 5 5 5; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 100"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 3; positionSpread: 5 5 5; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 100; accelerationValue: 0, 0, 0;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 3; positionSpread: 5 5 5; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 100; accelerationValue: 0, -10, 0;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 3; positionSpread: 5 5 5; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 100; accelerationValue: 0, 10, 0;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 1; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 0; accelerationValue: 0, 10, 0;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 10 10 10;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; velocityValue: 1 1 1;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; velocityValue: 5 5 5;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; velocityValue: 0 25 0;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; velocitySpread: 0 0 0;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; velocitySpread: 10 10 10;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; velocitySpread: 100 100 100;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; velocitySpread: 1000 1000 1000;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; velocitySpread: 10 7.5 10;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; dragValue: 0;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; dragValue: 0.5;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; dragValue: 1;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; dragSpread: 0;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; dragSpread: 1;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; dragSpread: 100;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 1; positionSpread: 3 3 3; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; dragRandomise: true;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; dragRandomise: false;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: snow; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: rain; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: stars; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #aff,#0af,#00f"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #aff,#0af,#55f"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 0;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 0.1;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 5;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 150;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; direction: -1;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; direction: 0;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; direction: 1;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; duration: 0;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; duration: 1;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; duration: 5;"></a-entity> -->
+
+    <!-- <a-entity id="enabled" position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; particleCount: 1;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; particleCount: 5;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; particleCount: 10;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; particleCount: 10000;"></a-entity> -->
+
+    <!-- https://icooon-mono.com/10976-%e6%96%b9%e4%bd%8d%e7%a3%81%e7%9f%b3%e3%82%a2%e3%82%a4%e3%82%b3%e3%83%b3/ -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; particleCount: 10; texture: image/compass.jpg;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; particleCount: 10; texture: image/compass.png;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; particleCount: 10; texture: image/compass.svg;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; size: 1; particleCount: 10; texture: image/compass.png;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 0; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; size: 1; particleCount: 1; texture: image/compass.png;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; randomise: true;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; randomise: false;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; opacity: 0;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; opacity: 0.2;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; opacity: 0.5;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; opacity: 1;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; blending: 0;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; blending: 1;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; blending: 2;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; blending: 3;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; blending: 4;"></a-entity> -->
+
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; maxParticleCount: 1;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; maxParticleCount: 10;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; maxParticleCount: 50;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; maxParticleCount: 100;"></a-entity> -->
+    <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; maxAge: 0.5; positionSpread: 0 0 0; rotationAxis: y; rotationAngle: 0; rotationAngleSpread: 5; accelerationValue: 0, 10, 0; accelerationSpread: 0 0 0; color: #ff6,#fa0,#f00; size: 1; maxParticleCount: 1000;"></a-entity> -->
+
+    <!-- positionSpread -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 5;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0.2 0.2 0.2; maxParticleCount: 5;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 3 3 3; maxParticleCount: 5;"></a-entity> -->
+
+    <!-- rotationAxis -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 5; rotationAxis: x;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 5; rotationAxis: y;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 5; rotationAxis: z;"></a-entity> -->
+
+    <!-- rotationAngle -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; rotationAxis: x; rotationAngle: 3.14;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; rotationAxis: x; rotationAngle: 0;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; rotationAxis: x; rotationAngle: 0.5;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; rotationAxis: x; rotationAngle: 1;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; rotationAxis: x; rotationAngle: 1.5;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; rotationAxis: x; rotationAngle: 2;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; rotationAxis: x; rotationAngle: 3;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; rotationAxis: x; rotationAngle: 3.14;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; rotationAxis: x; rotationAngle: 4;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; rotationAxis: x; rotationAngle: 6.3;"></a-entity> -->
+
+    <!-- rotationAngleSpread -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; color: red; rotationAxis: z; rotationAngle: 0; rotationAngleSpread: 0;"></a-entity>
+    <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; color: red; rotationAxis: z; rotationAngle: 0; rotationAngleSpread: 1;"></a-entity>
+    <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; color: red; rotationAxis: z; rotationAngle: 0; rotationAngleSpread: 2;"></a-entity>
+    <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; color: yellow; rotationAxis: z; rotationAngle: 0; rotationAngleSpread: 3.14;"></a-entity>
+    <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; color: blue; rotationAxis: z; rotationAngle: 0; rotationAngleSpread: 6.3;"></a-entity> -->
+
+    <!-- stay -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0;"></a-entity> -->
+
+    <!-- velocityValue y -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 1 0; velocitySpread: 0 0 0;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 -1 0; velocitySpread: 0 0 0;"></a-entity> -->
+
+    <!-- accelerationValue y -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; accelerationValue: 0 1 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; accelerationValue: 0 -1 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0;"></a-entity> -->
+
+    <!-- velocityValue y, dragValue -->
+    <!-- <a-entity position="-0.2 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 -1 0; velocitySpread: 0 0 0; dragValue: 0;"></a-entity>
+    <a-entity position="0.2 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 -1 0; velocitySpread: 0 0 0; dragValue: 1;"></a-entity> -->
+
+    <!-- accelerationValue y, dragValue -->
+    <!-- <a-entity position="-0.2 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; accelerationValue: 0 -1 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0; dragValue: 0;"></a-entity>
+    <a-entity position="0.2 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; accelerationValue: 0 -1 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0; dragValue: 1;"></a-entity> -->
+    <!-- <a-entity position="0.2 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1; accelerationValue: 0 -1 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0; dragValue: 1; dragSpread: 100; dragRandomise: true;"></a-entity> -->
+
+    <!-- velocityValue y, positionSpread, type box -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 50; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 -1 0; velocitySpread: 0 0 0; type: 1; positionSpread: 1 1 1;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 50; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0; type: 1; positionSpread: 1 1 1;"></a-entity> -->
+
+    <!-- velocityValue y, positionSpread, type sphere -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 50; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0; type: 2; positionSpread: 1 1 1;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 150; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0; type: 2; positionSpread: 1 1 1;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 1500; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0; type: 2; positionSpread: 1 1 1;"></a-entity> -->
+
+    <!-- velocityValue y, positionSpread, type disc -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 50; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0; type: 3; positionSpread: 1 1 1;"></a-entity> -->
+
+    <!-- velocityValue y, positionSpread -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 50; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0; positionSpread: 1 0 1;"></a-entity> -->
+
+    <!-- velocityValue y, positionSpread, rotation -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 10; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0; positionSpread: 1 0 1; rotationAxis: y; rotationAngle: 0;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 10; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0; positionSpread: 1 0 1; rotationAxis: y; rotationAngle: 6.3; rotationAngleSpread: 6.3;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 10; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0; positionSpread: 1 0 1; rotationAxis: y; rotationAngle: 3.2; rotationAngleSpread: 6.3;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 10; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0; positionSpread: 1 0 1; rotationAxis: y; rotationAngle: 1.6; rotationAngleSpread: 6.3;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 10; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0; positionSpread: 1 0 1; rotationAxis: y; rotationAngle: 1.6; rotationAngleSpread: 1.6;"></a-entity> -->
+
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 10; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0; positionSpread: 1 0 1; rotationAxis: x; rotationAngle: 6.3; rotationAngleSpread: 6.3;"></a-entity> -->
+    <!-- <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 10; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0; positionSpread: 1 0 1; rotationAxis: y; rotationAngle: 6.3; rotationAngleSpread: 6.3;"></a-entity> -->
+    <a-entity position="0 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 3; positionSpread: 0 0 0; maxParticleCount: 10; accelerationValue: 0 0 0; accelerationSpread: 0 0 0; velocityValue: 0 0 0; velocitySpread: 0 0 0; positionSpread: 1 0 1; rotationAxis: z; rotationAngle: 6.3; rotationAngleSpread: 6.3;"></a-entity>
+
+
+    <a-box color="blue" wireframe="true" width="1" height="1" depth="1" position="0 1 -2"></a-box>
+    <!-- <a-sphere radius="1" wireframe="true" position="0 1 -2"></a-sphere> -->
+    <a-sphere radius="0.03" color="red" position="0 1 -2" shadow></a-sphere>
+
+    <!-- <a-box position="0 0.5 -3" color="blue"></a-box> -->
+    <!-- <a-plane color="green" width="10" height="10" rotation="-90 0 0"></a-plane> -->
+    <a-circle color="green" radius="10" rotation="-90 0 0" shadow></a-circle>
+
+    <!-- <a-camera position="0 5 -2"></a-camera> -->
+  </a-scene>
+</body>
+
+</html>
