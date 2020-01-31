@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>opacity | particle system</title>
+  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-particle-system-component@1.1.3/dist/aframe-particle-system-component.min.js"></script> 
+</head>
+
+<body>
+  <a-scene background="color: grey">
+    <a-text position="-2 2.5 -2" value="opacity"></a-text>
+    <a-entity position="-1.5 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 2; maxParticleCount: 150; accelerationValue: 0 -0.2 0; accelerationSpread: 0 0 0; velocityValue: 0 -0.5 0; velocitySpread: 0 0 0; type: 1; positionSpread: 0.2 0.5 0.2; color: #FFa,#FF5,#F00,#000; opacity: 0;">
+        <a-text position="0 -0.5 0" width="3" align="center" value="0"></a-text>
+    </a-entity>
+    <a-entity position="-0.5 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 2; maxParticleCount: 150; accelerationValue: 0 -0.2 0; accelerationSpread: 0 0 0; velocityValue: 0 -0.5 0; velocitySpread: 0 0 0; type: 1; positionSpread: 0.2 0.5 0.2; color: #FFa,#FF5,#F00,#000; opacity: 0.2;">
+        <a-text position="0 -0.5 0" width="3" align="center" value="0.2"></a-text>
+    </a-entity>
+    <a-entity position="0.5 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 2; maxParticleCount: 150; accelerationValue: 0 -0.2 0; accelerationSpread: 0 0 0; velocityValue: 0 -0.5 0; velocitySpread: 0 0 0; type: 1; positionSpread: 0.2 0.5 0.2; color: #FFa,#FF5,#F00,#000; opacity: 1;">
+        <a-text position="0 -0.5 0" width="3" align="center" value="1"></a-text>
+    </a-entity>
+    <a-entity position="1.5 1 -2" particle-system="preset: dust; size: 0.5; maxAge: 2; maxParticleCount: 150; accelerationValue: 0 -0.2 0; accelerationSpread: 0 0 0; velocityValue: 0 -0.5 0; velocitySpread: 0 0 0; type: 1; positionSpread: 0.2 0.5 0.2; color: #FFa,#FF5,#F00,#000; opacity: 0,1,0;">
+      <a-text position="0 -0.5 0" width="3" align="center" value="0,1,0"></a-text>
+  </a-entity>
+  </a-scene>
+</body>
+
+</html>
