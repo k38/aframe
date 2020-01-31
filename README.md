@@ -26,6 +26,16 @@
         - [dragValue](https://k38.github.io/aframe/particle-system/dragValue.html)
         - [dragSpread](https://k38.github.io/aframe/particle-system/dragSpread.html)
         - [dragRandomise](https://k38.github.io/aframe/particle-system/dragRandomise.html)
+        - [color](https://k38.github.io/aframe/particle-system/color.html)
+        - [direction](https://k38.github.io/aframe/particle-system/direction.html)
+        - [duration](https://k38.github.io/aframe/particle-system/duration.html)
+        - [enabled](https://k38.github.io/aframe/particle-system/enabled.html)
+        - [maxParticleCount](https://k38.github.io/aframe/particle-system/maxParticleCount.html)
+        - [opacity](https://k38.github.io/aframe/particle-system/opacity.html)
+        - [particleCount](https://k38.github.io/aframe/particle-system/particleCount.html)
+        - [randomise](https://k38.github.io/aframe/particle-system/randomise.html)
+        - [size](https://k38.github.io/aframe/particle-system/size.html)
+        - [texture_blending](https://k38.github.io/aframe/particle-system/texture_blending.html)
     - example
         - mushroom
             - [mushroom_spores](https://k38.github.io/aframe/mushroom_spores/index.html)
