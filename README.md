@@ -11,10 +11,25 @@
 - [ecs](https://k38.github.io/aframe/ecs/)
 - [360_gallery](https://k38.github.io/aframe/360_gallery/)
 
-- particle-system
-    - mushroom
-        - [mushroom_spores](https://k38.github.io/aframe/mushroom_spores/index.html)
-        - [mushroom_spores_fantasy](https://k38.github.io/aframe/mushroom_spores/fantasy.html)
+- [particle-system](https://www.npmjs.com/package/aframe-particle-system-component)
+    - property example
+        - [preset](https://k38.github.io/aframe/particle-system/preset.html)
+        - [maxAge](https://k38.github.io/aframe/particle-system/maxAge.html)
+        - [type](https://k38.github.io/aframe/particle-system/type.html)
+        - [positionSpread](https://k38.github.io/aframe/particle-system/positionSpread.html)
+        - [rotationAxis, rotationAngle](https://k38.github.io/aframe/particle-system/rotation.html)
+        - [rotationAngleSpread](https://k38.github.io/aframe/particle-system/rotationAngleSpread.html)
+        - [accelerationValue](https://k38.github.io/aframe/particle-system/accelerationValue.html)
+        - [accelerationSpread](https://k38.github.io/aframe/particle-system/accelerationSpread.html)
+        - [velocityValue](https://k38.github.io/aframe/particle-system/velocityValue.html)
+        - [velocitySpread](https://k38.github.io/aframe/particle-system/velocitySpread.html)
+        - [dragValue](https://k38.github.io/aframe/particle-system/dragValue.html)
+        - [dragSpread](https://k38.github.io/aframe/particle-system/dragSpread.html)
+        - [dragRandomise](https://k38.github.io/aframe/particle-system/dragRandomise.html)
+    - example
+        - mushroom
+            - [mushroom_spores](https://k38.github.io/aframe/mushroom_spores/index.html)
+            - [mushroom_spores_fantasy](https://k38.github.io/aframe/mushroom_spores/fantasy.html)
 
 - physics-system
     - ball
