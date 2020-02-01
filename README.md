@@ -18,6 +18,7 @@
         - [depth](https://k38.github.io/aframe/star-system/depth.html)
         - [radius](https://k38.github.io/aframe/star-system/radius.html)
         - [size](https://k38.github.io/aframe/star-system/size.html)
+        - [size2](https://k38.github.io/aframe/star-system/size2.html)
         - [texture](https://k38.github.io/aframe/star-system/texture.html)
 
 - [particle-system](https://www.npmjs.com/package/aframe-particle-system-component)
