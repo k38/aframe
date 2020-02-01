@@ -11,6 +11,15 @@
 - [ecs](https://k38.github.io/aframe/ecs/)
 - [360_gallery](https://k38.github.io/aframe/360_gallery/)
 
+- [star-system](https://www.npmjs.com/package/aframe-star-system-component)
+    - property example
+        - [color](https://k38.github.io/aframe/star-system/color.html)
+        - [count](https://k38.github.io/aframe/star-system/count.html)
+        - [depth](https://k38.github.io/aframe/star-system/depth.html)
+        - [radius](https://k38.github.io/aframe/star-system/radius.html)
+        - [size](https://k38.github.io/aframe/star-system/size.html)
+        - [texture](https://k38.github.io/aframe/star-system/texture.html)
+
 - [particle-system](https://www.npmjs.com/package/aframe-particle-system-component)
     - property example
         - [preset](https://k38.github.io/aframe/particle-system/preset.html)

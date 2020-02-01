@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>star-system</title>
+  <title>depth | star-system</title>
   <!-- <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> -->
   <!-- <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script> -->
   <!-- <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script> -->
@@ -16,7 +16,12 @@
 <body>
   <a-scene>
       <a-sky color="black"></a-sky>
-      <a-entity star-system></a-entity>
+      <!-- <a-entity star-system="depth: 300;"></a-entity> -->
+      <!-- <a-entity star-system="depth: 1;"></a-entity> -->
+      <a-entity star-system="depth: 0; radius: 50;"></a-entity>
+      <!-- <a-entity star-system="depth: 0;"></a-entity> -->
+      <!-- <a-entity star-system="depth: -1;"></a-entity> -->
+      <!-- <a-entity star-system="depth: -300;"></a-entity> -->
   </a-scene>
 </body>
 

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>star-system</title>
+  <title>color | star-system</title>
   <!-- <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> -->
   <!-- <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script> -->
   <!-- <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script> -->
@@ -16,7 +16,13 @@
 <body>
   <a-scene>
       <a-sky color="black"></a-sky>
-      <a-entity star-system></a-entity>
+      <!-- <a-entity star-system="color: red;"></a-entity> -->
+      <!-- <a-entity star-system="color: #FF0;"></a-entity> -->
+      <!-- <a-entity star-system="color: rgb(255,0,0);"></a-entity> -->
+      <a-entity star-system="color: rgb(255,0,0); count: 3000;"></a-entity>
+      <a-entity star-system="color: rgb(255,255,0); count: 3000;"></a-entity>
+
+      <!-- <a-entity star-system="color: #FF0,#0FF;"></a-entity> -->
   </a-scene>
 </body>
 
