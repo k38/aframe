@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>a-torus-knot</title>
+  <!-- <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> -->
+  <!-- <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script> -->
+  <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+  <!-- <script src="lib/aframe.min.js"></script> -->
+  <script src="https://unpkg.com/aframe-layout-component@5.3.0/dist/aframe-layout-component.min.js"></script>
+  <!-- <script src="index.js"></script> -->
+</head>
+
+<body>
+  <a-scene background="color: grey;">
+
+    <a-entity position="-6 -2 -7" layout="type: box; columns: 4; margin: 4">
+    <!-- <a-entity position="0 0 -7" layout="type: circle; radius: 7"> -->
+      <a-torus-knot color="red" radius="1" radius-tubular="0.2" segments-radial="36" segments-tubular="32" p="2" q="3">
+        <a-text position="0 0 2" width="5" align="center" value="radius: 1\nradius-tubular: 0.2\nsegments-radial: 36\nsegments-tubular: 32\np: 2\nq: 3"></a-text>
+      </a-torus-knot>
+  
+      <a-torus-knot color="blue" radius="0.5" radius-tubular="0.2" segments-radial="36" segments-tubular="32" p="2" q="3">
+        <a-text position="0 0 2" width="5" align="center" value="radius: 0.5"></a-text>
+      </a-torus-knot>
+
+      <a-torus-knot color="green" radius="1" radius-tubular="0.4" segments-radial="36" segments-tubular="32" p="2" q="3">
+        <a-text position="0 0 2" width="5" align="center" value="radius-tubular: 0.4"></a-text>
+      </a-torus-knot>
+
+      <a-torus-knot color="orange" radius="1" radius-tubular="0.2" segments-radial="3" segments-tubular="32" p="2" q="3">
+        <a-text position="0 0 2" width="5" align="center" value="segments-radial: 3"></a-text>
+      </a-torus-knot>
+
+      <a-torus-knot color="purple" radius="1" radius-tubular="0.2" segments-radial="36" segments-tubular="16" p="2" q="3">
+        <a-text position="0 0 2" width="5" align="center" value="segments-tubular: 16"></a-text>
+      </a-torus-knot>
+
+      <a-torus-knot color="cyan" radius="1" radius-tubular="0.2" segments-radial="36" segments-tubular="32" p="4" q="3">
+        <a-text position="0 0 2" width="5" align="center" value="p: 4"></a-text>
+      </a-torus-knot>
+
+      <a-torus-knot color="magenta" radius="1" radius-tubular="0.2" segments-radial="36" segments-tubular="32" p="2" q="6">
+        <a-text position="0 0 2" width="5" align="center" value="q: 6"></a-text>
+      </a-torus-knot>
+
+      <a-torus-knot color="yellow" radius="1" radius-tubular="0.2" segments-radial="36" segments-tubular="32" p="1" q="1">
+        <a-text position="0 0 2" width="5" align="center" value="p: 1\nq: 1"></a-text>
+      </a-torus-knot>
+
+      <a-torus-knot color="brown" radius="1" radius-tubular="0.2" segments-radial="36" segments-tubular="32" p="0.5" q="1">
+        <a-text position="0 0 2" width="5" align="center" value="p: 0.5\nq: 1"></a-text>
+      </a-torus-knot>
+
+      <a-torus-knot color="navy" radius="1" radius-tubular="0.2" segments-radial="36" segments-tubular="32" p="1" q="0.5">
+        <a-text position="0 0 2" width="5" align="center" value="p: 1\nq: 0.5"></a-text>
+      </a-torus-knot>
+
+      <a-torus-knot color="olive" radius="0.5" radius-tubular="0.08" segments-radial="2" segments-tubular="32" p="2" q="0.6">
+        <a-text position="0 0 2" width="5" align="center" value="radius: 0.5\nradius-tubular: 0.08\nsegments-radial: 2\nq: 0.6\n"></a-text>
+      </a-torus-knot>
+    </a-entity>
+    
+
+  </a-scene>
+</body>
+
+</html>
