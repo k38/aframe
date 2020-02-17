@@ -11,6 +11,10 @@
 - [ecs](https://k38.github.io/aframe/ecs/)
 - [360_gallery](https://k38.github.io/aframe/360_gallery/)
 
+- primitive-attrs
+    - [a-torus](https://k38.github.io/aframe/primitive-attrs/torus.html)
+    - [a-torus-knot](https://k38.github.io/aframe/primitive-attrs/torus-knot.html)
+
 - [star-system](https://www.npmjs.com/package/aframe-star-system-component)
     - property example
         - [color](https://k38.github.io/aframe/star-system/color.html)
