@@ -115,6 +115,8 @@ class Tile {
     static tileClick(e) {
         e.target.setAttribute("mixin", "tile target");
         Tile.addForce(e.target);
+        Tile.removeTileEvents(e.target);
+        Game.judge();
     }
 
     static tileCollide(e) {
@@ -134,7 +136,15 @@ class Tile {
             }
 
             Game.judge();
-        }, 400, e.detail.target.el);
+        }, 300, e.detail.target.el);
+    }
+
+    static tileCollideSoundonly(e) {
+        if ( e.detail.body.el.getAttribute("class") === "floor" )
+            return;
+
+        if ( e.detail.target.el.components.sound__collision )
+            e.detail.target.el.components.sound__collision.playSound();
     }
 
     static tileSelect(e) {
