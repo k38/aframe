@@ -85,10 +85,7 @@ class Tile {
     static create(attrs) {
         let elem = Util.setAttrs(document.createElement("a-entity"), Tile.common);
         elem = Util.setAttrs(elem, attrs);
-        elem.addEventListener("click", Tile.tileClick);
-        elem.addEventListener("collide", Tile.tileCollide);
-        elem.addEventListener("mouseenter", Tile.tileSelect);
-        return elem;
+        return Tile.setTileEvents(elem);
     }
 
     static createTileParticle() {
@@ -127,24 +124,32 @@ class Tile {
         if ( e.detail.target.el.components.sound__collision )
             e.detail.target.el.components.sound__collision.playSound();
 
-        e.detail.target.el.removeEventListener("collide", Tile.tileCollide);
-        e.detail.target.el.removeEventListener("click", Tile.tileClick);
-        e.detail.target.el.removeEventListener("mouseenter", Tile.tileSelect);
+        Tile.removeTileEvents(e.detail.target.el);
 
-        Game.judge();
+        setTimeout((e)=>{
+            const r = Util.rotationRadToDeg(e.object3D.rotation);
+            if ( Math.abs(r[0]) < 20 ) {
+                Tile.setTileEvents(e);
+                return;
+            }
+
+            Game.judge();
+        }, 400, e.detail.target.el);
     }
 
     static tileSelect(e) {
         if ( !e.target.components.sound__select )
             return;
 
+        console.log("tileSelect",
+            Util.rotationRadToDeg(e.target.object3D.rotation));
         e.target.components.sound__select.playSound();
         const particle = Tile.createTileParticle();
         e.target.appendChild(particle);
         setTimeout((t) => {
             t.removeChild(particle);
         }, 800, e.target, particle);
-        console.log(e.target)
+        // console.log(e.target)
     }
 
     static addForce(elem) {
@@ -152,6 +157,20 @@ class Tile {
         var local = new CANNON.Vec3(0, 0, 0);
         var worldVelocity = elem.body.quaternion.vmult(force);
         elem.body.applyImpulse(worldVelocity, local);
+    }
+
+    static setTileEvents(elem) {
+        elem.addEventListener("click", Tile.tileClick);
+        elem.addEventListener("collide", Tile.tileCollide);
+        elem.addEventListener("mouseenter", Tile.tileSelect);
+        return elem;
+    }
+
+    static removeTileEvents(elem) {
+        elem.removeEventListener("collide", Tile.tileCollide);
+        elem.removeEventListener("click", Tile.tileClick);
+        elem.removeEventListener("mouseenter", Tile.tileSelect);
+        return elem;
     }
 }
 
@@ -161,5 +180,12 @@ class Util {
             elem.setAttribute(key, attrs[key]);
         });
         return elem;
+    }
+    static rotationRadToDeg(rotation) {
+        return [
+            THREE.Math.radToDeg(rotation.x),
+            THREE.Math.radToDeg(rotation.y),
+            THREE.Math.radToDeg(rotation.z),
+        ];
     }
 }
