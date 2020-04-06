@@ -31,7 +31,7 @@ function createTileParticle() {
         size: 0.08,
         maxAge: 0.5,
         particleCount: 20,
-        maxParticleCount: 100,
+        maxParticleCount: 20,
         accelerationValue: "0 0 0",
         accelerationSpread: "0 0 0",
         velocityValue: "0 0 0",

@@ -10,7 +10,7 @@
 - [primitives](https://k38.github.io/aframe/primitives/)
 - [ecs](https://k38.github.io/aframe/ecs/)
 - [360_gallery](https://k38.github.io/aframe/360_gallery/)
-- [dmonino01](https://k38.github.io/aframe/domino01/)
+- [domino01](https://k38.github.io/aframe/domino01/)
 
 
 - primitive-attrs
