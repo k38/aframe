@@ -34,7 +34,7 @@ class Game {
         const main = {
             shape: "box",
             offset: "0 0 -1",
-            halfExtents: "5 5 1",
+            halfExtents: "10 10 1",
         };
     
         elms.forEach((e) => {
@@ -81,7 +81,7 @@ class Game {
 }
 
 class Tile {
-    static common = {"dynamic-body": {mass: 5}, "mixin": "tile", "class": "tile"};
+    static common = {"dynamic-body": {mass: 16}, "mixin": "tile", "class": "tile"};
     static create(attrs) {
         let elem = Util.setAttrs(document.createElement("a-entity"), Tile.common);
         elem = Util.setAttrs(elem, attrs);
@@ -163,7 +163,7 @@ class Tile {
     }
 
     static addForce(elem) {
-        var force = new CANNON.Vec3(0, 0, -4);
+        var force = new CANNON.Vec3(0, 0, -26);
         var local = new CANNON.Vec3(0, 0, 0);
         var worldVelocity = elem.body.quaternion.vmult(force);
         elem.body.applyImpulse(worldVelocity, local);

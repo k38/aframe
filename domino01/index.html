@@ -9,20 +9,21 @@
 
   <!-- <script src="lib/aframe.min.js"></script> -->
   <!-- <script src="lib/aframe-physics-system.min.js"></script> -->
+  <!-- <script src="lib/aframe-particle-system-component.min.js"></script> -->
 
   <script src="stage.js"></script>
   <script src="index.js"></script>
 </head>
 
 <body>
-  <a-scene physics="debug: false">
+  <a-scene physics="debug: false;">
     <a-assets>
       <audio id="bgm" src="sound/routine.mp3" preload="auto"></audio>
       <audio id="tileCollision" src="sound/cursor1.mp3" preload="auto"></audio>
       <audio id="correct" src="sound/correct.mp3" preload="auto"></audio>
       <audio id="tileSelect" src="sound/select.mp3" preload="auto"></audio>
       <a-mixin id="tile"
-          geometry="primitive: box; width: 0.3; height: 0.6; depth: 0.1;"
+          geometry="primitive: box; width: 0.3; height: 0.6; depth: 0.08;"
           material="color: #ddd;"
           sound__collision="src: #tileCollision; autoplay: false; loop: false;"
           sound__select="src: #tileSelect; autoplay: false; loop: false;"
@@ -31,6 +32,7 @@
       <a-mixin id="target" material="color: #333;"></a-mixin>
     </a-assets>
     <a-entity id="field" shadow="receive: true;">
+      <a-plane width="1" height="1" rotation="-90 0 0" color="green" position="0 -0.29 0"></a-plane>
       <a-circle class="floor" color="#ccc" radius="10" rotation="-90 0 0" position="0 -0.3 0"></a-circle>
     </a-entity>
     <a-sound src="#bgm" autoplay="true" loop="true" position="0 1 0"></a-sound>
