@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>cubemap-component</title>
+  <!-- <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> -->
+  <!-- <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script> -->
+  <!-- <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> -->
+  <!-- <script src="lib/aframe.min.js"></script> -->
+  <!-- <script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script> -->
+  <script src="lib/aframe.0.7.0.min.js"></script>
+  <script src="lib/aframe-cubemap-component.min.js"></script>
+  <script src="lib/aframe-orbit-controls.min.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-entity cubemap="folder: Lycksele2/; edgeLength: 1;" position="-0.5 0 -3"></a-entity>
+    <!-- <a-circle color="green" radius="10" rotation="-90 0 0" position="0 -1 0"></a-circle> -->
+    <a-camera orbit-controls="target: 0 0 -3; maxPolarAngle: 180; minDistance: 0.5; maxDistance: 180; initialPosition: 0 0 1;"></a-camera>
+  </a-scene>
+</body>
+
+</html>
