@@ -6,6 +6,7 @@
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
   <script src="https://unpkg.com/aframe-particle-system-component@1.1.3/dist/aframe-particle-system-component.min.js"></script>
+  <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/b6d23310/dist/0.3/aframe-multisrc-component.js"></script>
 
   <!-- <script src="lib/aframe.min.js"></script> -->
   <!-- <script src="lib/aframe-physics-system.min.js"></script> -->
@@ -22,9 +23,16 @@
       <audio id="tileCollision" src="sound/cursor1.mp3" preload="auto"></audio>
       <audio id="correct" src="sound/correct.mp3" preload="auto"></audio>
       <audio id="tileSelect" src="sound/select.mp3" preload="auto"></audio>
+      <img id="right" src="img/front.png">
+      <img id="left" src="img/front.png">
+      <img id="top" src="img/front.png">
+      <img id="bottom" src="img/front.png">
+      <img id="front" src="img/front.png">
+      <img id="back" src="img/back.png">
       <a-mixin id="tile"
           geometry="primitive: box; width: 0.3; height: 0.6; depth: 0.08;"
-          material="color: #ddd;"
+          material="color: #fff;"
+          multisrc="srcs:#right,#left,#top,#bottom,#front,#back"
           sound__collision="src: #tileCollision; autoplay: false; loop: false;"
           sound__select="src: #tileSelect; autoplay: false; loop: false;"
         >
@@ -32,7 +40,7 @@
       <a-mixin id="target" material="color: #333;"></a-mixin>
     </a-assets>
     <a-entity id="field" shadow="receive: true;">
-      <a-plane width="1" height="1" rotation="-90 0 0" color="green" position="0 -0.29 0"></a-plane>
+      <!-- <a-plane width="1" height="1" rotation="-90 0 0" color="green" position="0 -0.29 0"></a-plane> -->
       <a-circle class="floor" color="#ccc" radius="10" rotation="-90 0 0" position="0 -0.3 0"></a-circle>
     </a-entity>
     <a-sound src="#bgm" autoplay="true" loop="true" position="0 1 0"></a-sound>

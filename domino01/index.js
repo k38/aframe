@@ -2,7 +2,25 @@
 document.addEventListener('DOMContentLoaded', DOMContentLoaded);
 
 function DOMContentLoaded() {
+    patch();
     Game.start(stages);
+}
+
+function patch() {
+    // aframe-multisrc-component
+    // Cannot read property 'addEventListener' of undefined
+    AFRAME.components.multisrc.Component.prototype.remove = function () {
+        var defaultMaterial = this.el.components.material.material;
+        this.el.getObject3D('mesh').material = defaultMaterial;
+        this.el.removeEventListener('componentchanged', this.compChange);
+        var animationEventsArray = ['animationbegin', 'animationstart', 'animationcomplete', 'animationend'];
+        var self = this;
+        animationEventsArray.forEach(function (event) {
+            // this.el.addEventListener(event, this.materialChangedByAnimation);
+            self.el.addEventListener(event, self.materialChangedByAnimation);
+        });
+        this.reduceMaterialChangedThrottle(200);
+    };
 }
 
 class Game {
@@ -45,6 +63,7 @@ class Game {
 
     static judge() {
         Game.count++;
+        // console.log(Game.count, Game.passing);
 
         if ( Game.count < Game.passing )
             return;
@@ -72,10 +91,11 @@ class Game {
 
     static clearField() {
         const tiles = document.querySelectorAll(".tile");
-        const field = document.querySelector("#field");
-    
         tiles.forEach(_ => {
-            field.removeChild(_);
+            try {
+                _.parentNode.removeChild(_);
+            }
+            finally{}
         });
     }
 }
