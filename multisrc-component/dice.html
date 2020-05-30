@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>dice | multisrc-component</title>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+  <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/b6d23310/dist/0.3/aframe-multisrc-component.js"></script>
+  <!-- <script src="lib/aframe.min.js"></script> -->
+  <!-- <script src="lib/aframe-multisrc-component.js"></script> -->
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <a-scene background="color: #f0f0f0;" physics="debug: false;">
+    <a-assets>
+      <img id="right" src="img/1.png">
+      <img id="left" src="img/6.png">
+      <img id="top" src="img/3.png">
+      <img id="bottom" src="img/4.png">
+      <img id="front" src="img/5.png">
+      <img id="back" src="img/2.png">
+    </a-assets>
+    <a-entity shadow="receive: true;" position="0 0 -5">
+        <a-box width="0.4" height="0.4" depth="0.4" position="0.05 4.9 -5" multisrc="srcs:#right,#left,#top,#bottom,#front,#back" dynamic-body="shape:box; mass: 100;"></a-box>
+        <a-box width="0.4" height="0.4" depth="0.4" position="-0.05 5 -4.9" multisrc="srcs:#right,#left,#top,#bottom,#front,#back" dynamic-body="shape:box; mass: 100;"></a-box>
+        <a-box width="15" height="0.1" depth="15" position="0 -1.5 0" color="#3a8251" static-body></a-box>
+    </a-entity>
+  </a-scene>
+</body>
+
+</html>

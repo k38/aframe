@@ -12,6 +12,11 @@
 - [360_gallery](https://k38.github.io/aframe/360_gallery/)
 - [domino01](https://k38.github.io/aframe/domino01/)
 
+- [multisrc-component](https://github.com/elbobo/aframe-multisrc-component)
+    - [dice](https://k38.github.io/aframe/multisrc-component/dice.html)
+    - [cheat_dice](https://k38.github.io/aframe/multisrc-component/cheat_dice.html)
+    - [index](https://k38.github.io/aframe/multisrc-component/index.html)
+    - [domino](https://k38.github.io/aframe/multisrc-component/domino.html)
 
 - primitive-attrs
     - [a-torus](https://k38.github.io/aframe/primitive-attrs/torus.html)

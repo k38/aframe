@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>cheat dice | multisrc-component</title>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+  <!-- <script src="lib/aframe.min.js"></script> -->
+  <!-- <script src="lib/aframe-multisrc-component.js"></script> -->
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <a-scene background="color: #f0f0f0;" physics="debug: false;">
+    <a-assets>
+      <img id="image" src="img/1.png">
+    </a-assets>
+    <a-entity shadow="receive: true;" position="0 0 -5">
+        <a-box width="0.4" height="0.4" depth="0.4" position="0.05 4.9 -5" dynamic-body="shape:box; mass: 100;" src="#image"></a-box>
+        <a-box width="0.4" height="0.4" depth="0.4" position="-0.05 5 -4.9" dynamic-body="shape:box; mass: 100;" src="#image"></a-box>
+        <a-box width="15" height="0.1" depth="15" position="0 -1.5 0" color="#3a8251" static-body></a-box>
+    </a-entity>
+  </a-scene>
+</body>
+
+</html>
