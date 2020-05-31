@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>lighting</title>
+  <!-- <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> -->
+  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <!-- <a-scene light="defaultLightsEnabled: false;"> -->
+  <!-- <a-scene shadow="enabled: true;"> -->
+  <!-- <a-scene shadow="enabled: false;"> -->
+  <!-- <a-scene shadow="autoUpdate: false;"> -->
+  <!-- <a-scene shadow="autoUpdate: true;"> -->
+  <!-- <a-scene shadow="type: pcf;"> -->
+  <!-- <a-scene shadow="type: basic;"> -->
+  <!-- <a-scene shadow="type: pcfsoft;"> -->
+  <a-scene>
+    <a-assets>
+      <a-asset-item id="pin" src="model/bowling_pin/scene.gltf"></a-asset-item>
+    </a-assets>
+    <a-entity>
+      <!-- <a-light type="directional" intensity="1.0" position="0 20 20" light="castShadow: true;" target="#directionaltarget"></a-light> -->
+      <a-light type="directional" intensity="1.0" position="10 10 10" light="castShadow: true;" target="#directionaltarget"></a-light>
+      <!-- <a-light type="directional" intensity="1.0" position="10 10 10" light="castShadow: true;"></a-light> -->
+      <!-- <a-light type="point" intensity="1.0" position="10 10 10" light="castShadow: true;"></a-light> -->
+      <!-- <a-light type="spot" intensity="1.0" position="10 10 10" light="castShadow: true;"></a-light> -->
+      <!-- <a-light type="ambient" intensity="1.0" position="10 10 10"></a-light> -->
+      <!-- <a-light type="hemisphere" intensity="1.0" position="10 10 10"></a-light> -->
+      <!-- <a-entity light="type: ambient; color: #BBB"></a-entity> -->
+      <!-- <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-0.5 1 1"></a-entity> -->
+    </a-entity>
+    <a-camera position="0 1 8" fov="30" far="100" zoom="1.2"></a-camera>
+
+    <a-entity shadow="receive: true;">
+    <!-- <a-entity> -->
+      <a-plane width="10" height="10" rotation="-90 0 0" color="green"></a-plane>
+
+      <a-box color="skyblue" position="1 0.5 -3"></a-box>
+      <a-cylinder id="directionaltarget" color="pink" radius="0.5" position="-1 0.5 -3"></a-cylinder>
+      <!-- <a-entity gltf-model="#pin" scale="2 2 2" position="-1 0 -1"></a-entity> -->
+    </a-entity>
+    <a-entity gltf-model="#pin" scale="2 2 2" position="-1 0 -1"></a-entity>
+
+  </a-scene>
+</body>
+
+</html>
