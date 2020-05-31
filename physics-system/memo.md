@@ -5,6 +5,9 @@ https://github.com/donmccurdy/aframe-physics-system
 phisics参考
 https://www.jyuko49.com/entry/2017/11/26/232827
 
+ボーリング参考
+https://github.com/ZakAttakk/A-Frame-Bowling-Game
+
 ## 課題
 
 - 地べたの隙間

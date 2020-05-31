@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>physics-system</title>
+  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', DOMContentLoaded);
+    function DOMContentLoaded(){
+      setPinProp();
+
+      const scene = document.querySelector("a-scene");
+      const ball = createBall(scene);
+      scene.appendChild(ball);
+      ball.addEventListener("body-loaded", function(e){
+        addForce(this);
+      });
+    }
+    function setPinProp() {
+      const pins = document.querySelectorAll(".pin");
+      const attr = {
+        shape: "none",
+      };
+      const main = {
+        shape: "cylinder",
+        offset: "0 0.17 0",
+        radiusTop: 0.06,
+        radiusBottom: 0.06,
+        height: 0.34,
+        numSegments: 10
+      };
+      pins.forEach((e)=>{
+        e.setAttribute("dynamic-body", attr);
+        e.setAttribute("shape__main", main);
+      });
+      const slaves = document.querySelectorAll(".slave");
+      const constraint = {
+        target: "#master",
+        // type: "lock",
+        // type: "distance",
+        // type: "hinge",
+        // type: "coneTwist",
+        type: "pointToPoint",
+        // maxForce: 0,
+        // maxForce: 0.0000001,
+        // maxForce: 0.1,
+        // maxForce: 0.3,
+        // maxForce: 0.5,
+        // maxForce: 0.8,
+        // maxForce: 1,
+        // maxForce: 2,
+        maxForce: 5,
+        // maxForce: 10,
+        // collideConnected: true,
+        // collideConnected: false,
+        // wakeUpBodies: true,
+        // wakeUpBodies: false,
+        // distance: 0,  // type: distance
+        // distance: 0.5,  // type: distance
+        // distance: 1,  // type: distance
+        // distance: 10,  // type: distance
+        // pivot: "0 0 0",  // type: pointToPoint, coneTwist, hinge
+        // pivot: "0.5 0.5 0.5",  // type: pointToPoint, coneTwist, hinge
+        // pivot: "1 1 1",  // type: pointToPoint, coneTwist, hinge
+        // targetPivot: "0 0 0",  // type: pointToPoint, coneTwist, hinge
+        // targetPivot: "0.5 0.5 0.5",  // type: pointToPoint, coneTwist, hinge
+        // targetPivot: "1 1 1",  // type: pointToPoint, coneTwist, hinge
+        // targetPivot: "5 5 5",  // type: pointToPoint, coneTwist, hinge
+        // axis: "0 0 0",  // type: coneTwist, hinge
+        // axis: "0 0 0",  // type: coneTwist, hinge
+        // axis: "0 0 1",  // type: coneTwist, hinge
+        // axis: "0 1 0",  // type: coneTwist, hinge
+        // axis: "0 0.5 0",  // type: coneTwist, hinge
+        // axis: "1 0 0",  // type: coneTwist, hinge
+        // targetAxis: "0 0 0",  // type: coneTwist, hinge
+        // targetAxis: "1 0 0",  // type: coneTwist, hinge
+        // targetAxis: "0 1 0",  // type: coneTwist, hinge
+        // targetAxis: "0 0 1",  // type: coneTwist, hinge
+      };
+      slaves.forEach((e)=>{
+        e.setAttribute("constraint", constraint);
+      });
+    }
+    function createBall(parent) {
+      const ball = document.createElement("a-sphere");
+      ball.setAttribute("id", "ball");
+      ball.setAttribute("color", "#2c2c2c");
+      ball.setAttribute("position", "0 0.05 -3");
+      ball.setAttribute("radius", "0.2");
+      ball.setAttribute("dynamic-body", {
+        angularDamping: 0.0001,
+        linearDamping: 0.0001,
+      });
+      return ball;
+    }
+    function addForce(ball) {
+      const v = new THREE.Vector3(0, 0, -80);
+      const p = ball.object3D.position;
+      ball.body.applyImpulse(
+        new CANNON.Vec3(v.x, v.y, v.z),
+        new CANNON.Vec3(p.x, p.y, p.z)
+      );
+    }
+  </script>
+</head>
+
+<body>
+  <a-scene physics="debug: false" background="color: #f5f5f5;">
+    <a-assets>
+      <a-asset-item id="pin" src="model/bowling_pin/scene.gltf"></a-asset-item>
+    </a-assets>
+    <a-camera position="0 0.2 0" fov="30" far="100" zoom="1.2"></a-camera>
+    <a-plane color="#c67e26" width="3" height="25" position="0 -1 -15" rotation="-90 0 0" static-body></a-plane>
+    <a-entity class="pin" id="master" gltf-model="#pin" scale="2 2 2" position="0 0 -18"></a-entity>
+    <a-entity class="pin slave" gltf-model="#pin" scale="2 2 2" position="0.2 0 -18.2"></a-entity>
+    <a-entity class="pin slave" gltf-model="#pin" scale="2 2 2" position="-0.2 0 -18.2"></a-entity>
+  </a-scene>
+  <script></script>
+</body>
+
+</html>
