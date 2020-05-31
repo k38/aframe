@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>envMap</title>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-layout-component@5.3.0/dist/aframe-layout-component.min.js"></script>
+  <!-- <script src="lib/aframe.min.js"></script> -->
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <a-cubemap id="cube">
+        <img class="right" src="img/1.png">
+        <img class="left" src="img/2.png">
+        <img class="top" src="img/3.png">
+        <img class="bottom" src="img/4.png">
+        <img class="front" src="img/5.png">
+        <img class="back" src="img/6.png">
+      </a-cubemap>
+    </a-assets>
+    <a-entity position="-3 0 -5" layout="type: box; columns: 3; margin: 3">
+      <a-box width="2" height="2" depth="2" material="color: #000; shader: standard; envMap: #cube; roughness: 0.0;"></a-box>
+      <a-box width="2" height="2" depth="2" material="shader: standard; envMap: #cube; roughness: 0.001;"></a-box>
+      <a-box width="2" height="2" depth="2" material="shader: standard; envMap: #cube; roughness: 0.5;"></a-box>
+
+      <a-box width="2" height="2" depth="2" material="color: #888; shader: standard; envMap: #cube; roughness: 0.0;"></a-box>
+      <a-box width="2" height="2" depth="2" material="shader: standard; envMap: #cube; roughness: 0.001;"></a-box>
+      <a-box width="2" height="2" depth="2" material="shader: standard; envMap: #cube; roughness: 0.5;"></a-box>
+
+      <a-box width="2" height="2" depth="2" material="color: #fff; shader: standard; envMap: #cube; roughness: 0.0;"></a-box>
+      <a-box width="2" height="2" depth="2" material="shader: standard; envMap: #cube; roughness: 0.001;"></a-box>
+      <a-box width="2" height="2" depth="2" material="shader: standard; envMap: #cube; roughness: 0.5;"></a-box>
+    </a-entity>
+    <a-circle color="#660" radius="10" rotation="-90 0 0" position="0 -1 0"></a-circle>
+    <!-- <a-light type="point" color="#aaa" position="0 10 0"></a-light> -->
+    <a-light type="ambient" color="#ccc" position="0 10 0"></a-light>
+  </a-scene>
+</body>
+
+</html>

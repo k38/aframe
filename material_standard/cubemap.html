@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>env map</title>
+    <meta name="description" content="Env Map - A-Frame">
+    <!-- <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script> -->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+        <a-assets>
+            <a-cubemap id="dice">
+                <img src="img/1.png">
+                <img src="img/2.png">
+                <img src="img/3.png">
+                <img src="img/4.png">
+                <img class="正面" src="img/5.png">
+                <img class="右面" src="img/6.png">
+            </a-cubemap>
+        </a-assets>
+
+      <!-- <a-box position="2 2 -3" rotation="0 0 0" color="#FFF" env-map="#dice" roughness="0.0"></a-box>
+      <a-box position="-2 0 -3" rotation="0 0 0" color="#FFF" env-map="#dice" roughness="0.0"></a-box>
+      <a-box position="-2 0 3" rotation="0 0 0" color="#FFF" env-map="#dice" roughness="0.0"></a-box>
+      <a-box position="2 3 3" rotation="0 0 0" color="#FFF" env-map="#dice" roughness="0.0"></a-box> -->
+
+      <!-- <a-entity position="2 2 -3" geometry="primitive: box" material="envMap: #dice; repeat: 1 1; height: 128; width: 128; roughness: 0;"></a-entity> -->
+      <!-- <a-entity position="2 2 -3" geometry="primitive: box" material="shader: flat; envMap: #dice; roughness: 0;"></a-entity> -->
+      <!-- <a-entity position="2 2 -3" geometry="primitive: box" material="envMap: #dice; roughness: 0;"></a-entity> -->
+      <!-- <a-entity position="2 2 -3" geometry="primitive: box" material="envMap: #img1,#img2,#img3,#img4,#img5,#img6; roughness: 0;"></a-entity> -->
+      <a-entity position="2 2 -3" geometry="primitive: box" material="envMap: #dice; roughness: 0;"></a-entity>
+
+      <!-- <a-light type="point" color="#fff" position="0 10 0"></a-light> -->
+      <a-light type="ambient" color="#aaa" position="0 10 0"></a-light>
+      <!-- <a-light type="directional" color="#aaa" position="0 10 0"></a-light> -->
+      <!-- <a-light type="hemisphere" color="#aaa" position="0 10 0"></a-light> -->
+      <!-- <a-sky color="#ECECEC"></a-sky> -->
+    </a-scene>
+  </body>
+</html>
