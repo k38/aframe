@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>play-sound-on-event</title>
+  <!-- <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> -->
+  <!-- <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script> -->
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-play-sound-on-event@1.0.2/dist/aframe-play-sound-on-event.min.js"></script>
+  <!-- <script src="lib/aframe.min.js"></script> -->
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <audio id="routine" src="sound/routine.mp3" preload="auto"></audio>
+      <audio id="tileSelect" src="sound/cursor1.mp3" preload="auto"></audio>
+    </a-assets>
+    <a-entity
+      position="0 0 -3"
+      sound="src: #routine"
+      play-sound-on-event="mode: toggle-stop; event: click"
+      geometry="primitive: box">
+    </a-entity>
+    <a-box
+      sound__select="src: #tileSelect; autoplay: false; loop: false; on: mouseenter;"
+      position="2 0 -3"
+      color="blue">
+    </a-box>
+    <a-circle color="green" radius="10" rotation="-90 0 0" position="0 -1 0"></a-circle>
+    <a-camera>
+      <a-cursor color="#333" fuse="true">
+        <a-animation begin="click" easing="ease-in" attribute="scale" dur="150" fill="forwards" from="0.3 0.3 0.3" to="1 1 1"></a-animation>
+        <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" dur="1500" fill="backwards" from="1 1 1" to="0.3 0.3 0.3"></a-animation>
+      </a-cursor>
+    </a-camera>
+  </a-scene>
+</body>
+
+</html>
