@@ -12,6 +12,9 @@
 - [360_gallery](https://k38.github.io/aframe/360_gallery/)
 - [domino01](https://k38.github.io/aframe/domino01/)
 
+- [howler](https://github.com/goldfire/howler.js)
+    - [index](https://k38.github.io/aframe/howler/index.html)
+
 - [play-sound-on-event](https://www.npmjs.com/package/aframe-play-sound-on-event)
     - [index](https://k38.github.io/aframe/play-sound-on-event/index.html)
 
