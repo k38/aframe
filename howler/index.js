@@ -4,7 +4,7 @@ var sound;
 var bg;
 
 function DOMContentLoaded(){
-    document.querySelector("a-scene").addEventListener("enter-vr", enterVR);
+    // document.querySelector("a-scene").addEventListener("enter-vr", enterVR);
 
     sound = new Howl({
         src: ["sound.mp3"],
@@ -13,6 +13,12 @@ function DOMContentLoaded(){
             focus: [(4*60 + 29.5) * 1000, 1 * 1000],
             collision: [(4*60 + 34) * 1000, 1 * 1000],
             clear: [(4*60 + 39) * 1000, 2 * 1000],
+        },
+        onplay: function(){
+            if(!sound.playing(bg)){
+                bg = sound.play("bg");
+                sound.volume(0.2, bg);
+            }
         }
     });
 
@@ -31,9 +37,9 @@ function mouseEnter(e) {
     sound.pos(p.x, p.y, p.z, id);
 }
 
-function enterVR(e) {
-    if(!sound.playing(bg)){
-        bg = sound.play("bg");
-        sound.volume(0.2, bg);
-    }
-}
+// function enterVR(e) {
+//     if(!sound.playing(bg)){
+//         bg = sound.play("bg");
+//         sound.volume(0.2, bg);
+//     }
+// }
