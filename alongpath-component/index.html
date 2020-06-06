@@ -7,22 +7,41 @@
   <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script> 
   <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
   <!-- <script src="lib/aframe.min.js"></script> -->
-  <script src="index.js"></script>
+  <!-- <script src="index.js"></script> -->
 </head>
 
 <body>
   <a-scene>
-    <a-box position="0 0 -3" color="blue"></a-box>
+    <!-- <a-box position="0 0 -3" color="blue"></a-box> -->
     <a-circle color="green" radius="10" rotation="-90 0 0" position="0 -1 0"></a-circle>
 
-    <a-curve id="track1">
+    <!-- <a-curve id="track1">
       <a-curve-point position="-2 2 -3"></a-curve-point>
       <a-curve-point position="0 1 -3"></a-curve-point>
       <a-curve-point position="2 2 -3"></a-curve-point>
+    </a-curve> -->
+
+    <a-curve id="t_circle" position="0 0 0">
+      <a-curve-point position="0 0 -3"></a-curve-point>
+      <a-curve-point position="3 0 0"></a-curve-point>
+      <a-curve-point position="0 0 3"></a-curve-point>
+      <a-curve-point position="-3 0 0"></a-curve-point>
+      <a-curve-point position="0 0 -3"></a-curve-point>
+    </a-curve>
+
+    <a-curve id="t_circle2" position="0 1.5 0">
+      <a-curve-point position="0.5 0 -3"></a-curve-point>
+      <a-curve-point position="3 0 0"></a-curve-point>
+      <a-curve-point position="0 0 3"></a-curve-point>
+      <a-curve-point position="-3 0 0"></a-curve-point>
+      <a-curve-point position="-0.5 0 -3"></a-curve-point>
+      <a-curve-point position="0.5 0 -3"></a-curve-point>
     </a-curve>
     
     <!-- <a-box color="blue" alongpath="curve: #track1; rotate: true; loop: true; resetonplay: true; delay: 2000; dur: 2000; triggerRadius: 1;"></a-box> -->
-    <a-box color="blue" alongpath="curve: #track1; rotate: true; loop: true; resetonplay: true; delay: 2000; dur: 2000; triggerRadius: 0.01;"></a-box>
+    <!-- <a-box color="blue" alongpath="curve: #track1; rotate: true; loop: true; resetonplay: true; delay: 2000; dur: 2000; triggerRadius: 0.01;"></a-box> -->
+    <!-- <a-box color="orange" alongpath="curve: #t_circle; rotate: true; loop: true; resetonplay: true; delay: 2000; dur: 20000; triggerRadius: 10.01;"></a-box> -->
+    <a-box color="yellow" alongpath="curve: #t_circle2; rotate: true; loop: true; resetonplay: true; delay: 2000; dur: 20000; triggerRadius: 0;"></a-box>
   </a-scene>
 </body>
 
