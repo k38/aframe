@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>runway | alongpath-component</title>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script> 
+  <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-particle-system-component@1.1.3/dist/aframe-particle-system-component.min.js"></script> 
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <a-scene background="color: #89c;">
+    <a-assets>
+      <a-asset-item id="model_aircraft" src="model/air_new_zealand_boeing_777_219_er_updated_livery/scene.gltf"></a-asset-item>
+      <img id="sky" src="img/R0010289.jpg">
+      <img id="runway" src="img/runway.jpg">
+    </a-assets>
+    <a-curve id="path" position="0 0 0">
+      <a-curve-point id="p1" position="-3000 0 -7500"></a-curve-point>
+      <a-curve-point id="p2" position="-1500 0 -7500"></a-curve-point>
+      <a-curve-point id="p3" position="-600 0 -7500"></a-curve-point>
+      <a-curve-point id="p4" position="-100 0 -7500"></a-curve-point>
+      <a-curve-point id="p5" position="0 0 -7400"></a-curve-point>
+      <a-curve-point id="p6" position="0 0 -7299"></a-curve-point>
+      <a-curve-point id="p7" position="0 0 -7198"></a-curve-point>
+      <a-curve-point id="p8" position="0 0 -7197"></a-curve-point>
+      <a-curve-point id="p9" position="0 0 -7196"></a-curve-point>
+      <a-curve-point id="p10" position="0 0 -7195"></a-curve-point>
+      <a-curve-point id="p11" position="0 2 -6500"></a-curve-point>
+      <a-curve-point id="p12" position="0 4 -2000"></a-curve-point>
+      <a-curve-point id="p13" position="0 500 2500"></a-curve-point>
+      <a-curve-point id="p14" position="0 3000 7000"></a-curve-point>
+      <a-curve-point id="p15" position="-800 8000 11000"></a-curve-point>
+    </a-curve>
+    <a-entity id="aircraft" gltf-model="#model_aircraft" scale="0.8 0.8 0.8" position="-3000 0 -7500" alongpath="curve: #path; rotate: true; loop: true; resetonplay: true; dur: 20000; triggerRadius: 10.0;">
+      <a-entity class="engine" position="-400 50 -500" particle-system="enabled: false;"></a-entity>
+      <a-entity class="engine" position="400 50 -500" particle-system="enabled: false;"></a-entity>
+    </a-entity>
+    <a-plane width="1000" height="10000" src="#runway" rotation="-90 0 0" position="0 -3 0" repeat="1 30" offset="0 100"></a-plane>
+    <a-sky radius="10000" rotation="0 -30 0" src="#sky"></a-sky>
+  </a-scene>
+</body>
+
+</html>

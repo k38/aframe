@@ -12,6 +12,9 @@
 - [360_gallery](https://k38.github.io/aframe/360_gallery/)
 - [domino01](https://k38.github.io/aframe/domino01/)
 
+- [alongpath-component](https://www.npmjs.com/package/aframe-alongpath-component)
+    - [runway](https://k38.github.io/aframe/alongpath-component/runway.html)
+
 - [howler](https://github.com/goldfire/howler.js)
     - [index](https://k38.github.io/aframe/howler/index.html)
 
