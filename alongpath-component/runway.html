@@ -3,6 +3,10 @@
 
 <head>
   <title>runway | alongpath-component</title>
+  <!-- <script src="lib/aframe.min.js"></script>
+  <script src="lib/aframe-curve-component.min.js"></script> 
+  <script src="lib/aframe-alongpath-component.min.js"></script>
+  <script src="lib/aframe-particle-system-component.min.js"></script>  -->
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script> 
   <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
@@ -34,7 +38,7 @@
       <a-curve-point id="p14" position="0 3000 7000"></a-curve-point>
       <a-curve-point id="p15" position="-800 8000 11000"></a-curve-point>
     </a-curve>
-    <a-entity id="aircraft" gltf-model="#model_aircraft" scale="0.8 0.8 0.8" position="-3000 0 -7500" alongpath="curve: #path; rotate: true; loop: true; resetonplay: true; dur: 20000; triggerRadius: 10.0;">
+    <a-entity id="aircraft" gltf-model="#model_aircraft" scale="0.8 0.8 0.8" position="-3000 0 -7500" alongpath="curve: #path; rotate: true; loop: true; resetonplay: true; dur: 20000; triggerRadius: 100.0;">
       <a-entity class="engine" position="-400 50 -500" particle-system="enabled: false;"></a-entity>
       <a-entity class="engine" position="400 50 -500" particle-system="enabled: false;"></a-entity>
     </a-entity>
