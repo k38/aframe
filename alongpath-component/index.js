@@ -42,11 +42,11 @@ function DOMContentLoaded(){
 }
 
 function engineControl(sw){
-    const param = {"preset":"dust","size":800,"maxAge":1,"particleCount":30,"maxParticleCount":150,"type":1,"color":["#fff"],"blending":1,"positionSpread":{"x":0,"y":0,"z":0},"opacity":["0","0.7","0"],"accelerationValue":{"x":0,"y":-500,"z":500},"accelerationSpread":{"x":1500,"y":1500,"z":1500},"velocityValue":{"x":0,"y":0,"z":0},"velocitySpread":{"x":0,"y":0,"z":0},"enabled":false,"rotationAxis":"x","rotationAngle":3.14,"rotationAngleSpread":0,"dragValue":0,"dragSpread":0,"dragRandomise":false,"direction":1,"duration":null,"texture":"https://cdn.rawgit.com/IdeaSpaceVR/aframe-particle-system-component/master/dist/images/smokeparticle.png","randomise":false};
+    const param = {"preset":"dust","size":800,"maxAge":1,"particleCount":30,"maxParticleCount":150,"type":1,"color":["#fff"],"blending":1,"positionSpread":{"x":0,"y":0,"z":0},"opacity":["0","0.2","0"],"accelerationValue":{"x":0,"y":-500,"z":500},"accelerationSpread":{"x":2500,"y":500,"z":500},"velocityValue":{"x":0,"y":0,"z":0},"velocitySpread":{"x":0,"y":0,"z":0},"enabled":false,"rotationAxis":"x","rotationAngle":3.14,"rotationAngleSpread":0,"dragValue":0,"dragSpread":0,"dragRandomise":false,"direction":1,"duration":null,"texture":"https://cdn.rawgit.com/IdeaSpaceVR/aframe-particle-system-component/master/dist/images/smokeparticle.png","randomise":false};
     switch(sw){
         case "on":
             param["enabled"] = true;
-            param["opacity"] = ["0","0.5","0"];
+            param["opacity"] = ["0","0.2","0"];
             break;
         case "low":
             param["enabled"] = true;
@@ -54,7 +54,7 @@ function engineControl(sw){
             break;
         case "off":
             param["enabled"] = false;
-            param["opacity"] = ["0","0.5","0"];
+            param["opacity"] = ["0","0.2","0"];
             break;
     }
     engines.forEach(_ => {
