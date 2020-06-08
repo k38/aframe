@@ -1,9 +1,12 @@
-//@ts-check
 document.addEventListener('DOMContentLoaded', DOMContentLoaded);
 
 var engines;
+var sound;
+var bgm;
+var engine;
 
 function DOMContentLoaded(){
+    initSounds();
     engines = document.querySelectorAll(".engine");
     const path = document.querySelector("#path");
     path.addEventListener("alongpath-trigger-activated", (_)=>{
@@ -12,12 +15,20 @@ function DOMContentLoaded(){
         switch(point){
             case "p7":
                 engineControl("on");
+                upBgm();
+                setTimeout(_ => {
+                    playEngine();
+                }, 4000);
+                setTimeout(_ => {
+                    downBgm();
+                }, 6500);
                 break;
             case "p12":
             case "p13":
                 engineControl("low");
                 break;
             case "p1":
+                restartBgm();
             case "p2":
             case "p14":
             case "p15":
@@ -49,4 +60,50 @@ function engineControl(sw){
     engines.forEach(_ => {
         _.setAttribute("particle-system", param);
     });
+}
+
+function initSounds() {
+    sound = new Howl({
+        src: ["sound/sound.mp3"],
+        autoplay: true,
+        sprite: {
+            bgm: [0, 9.1 * 1000, true],
+            engine: [11 * 1000, 8.5 * 1000]
+        },
+    });
+    playBgm();
+}
+
+function playBgm() {
+    if(!sound.playing(bgm)){
+        console.log("play");
+        bgm = sound.play("bgm");
+        sound.volume(0.0001, bgm);
+        sound.fade(0.0001, 0.1, 1500, bgm);
+    }
+}
+
+function restartBgm() {
+    console.log("restart");
+    if(sound.playing(bgm)){
+        sound.fade(0.0001, 0.1, 1500, bgm);
+    }
+}
+
+function upBgm() {
+    console.log("up");
+    if(sound.playing(bgm)){
+        sound.fade(0.1, 0.4, 500, bgm);
+    }
+}
+
+function downBgm() {
+    console.log("down");
+    if(sound.playing(bgm)){
+        sound.fade(0.4, 0.0001, 500, bgm);
+    }
+}
+
+function playEngine() {
+    const id = sound.play("engine");
 }
