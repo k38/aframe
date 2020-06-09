@@ -106,4 +106,8 @@ function downBgm() {
 
 function playEngine() {
     const id = sound.play("engine");
+    sound.fade(0.0, 1.0, 2000, id);
+    setTimeout(_ => {
+        sound.fade(1.0, 0.0, 2000, id);
+    }, 3500);
 }
