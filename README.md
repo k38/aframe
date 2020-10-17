@@ -12,6 +12,8 @@
 - [360_gallery](https://k38.github.io/aframe/360_gallery/)
 - [domino01](https://k38.github.io/aframe/domino01/)
 
+- [8bit](https://k38.github.io/aframe/8bit/index.html)
+
 - [alongpath-component](https://www.npmjs.com/package/aframe-alongpath-component)
     - [runway](https://k38.github.io/aframe/alongpath-component/runway.html)
 

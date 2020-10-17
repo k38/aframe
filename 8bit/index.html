@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>8bit</title>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+  <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+  <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
+  <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
+  <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.min.js"></script>
+  <!-- <script src="lib/aframe.min.js"></script>
+  <script src="lib/aframe-physics-system.min.js"></script>
+  <script src="lib/aframe-gif-shader.min.js"></script>
+  <script src="lib/aframe-gif-component.min.js"></script>
+  <script src="lib/aframe-curve-component.min.js"></script>
+  <script src="lib/aframe-alongpath-component.min.js"></script>
+  <script src="lib/howler.min.js"></script> -->
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <a-scene physics="debug: false; gravity: -9.8; friction: 0.0000001; restitution: 0.9;">
+    <a-assets>
+      <a-entity class="images">
+        <img id="img_hatena" src="img/m1_b1.gif"></img>
+        <img id="img_soft" src="img/m1_b2.png"></img>
+        <img id="img_softEffect" src="img/m1_b2_2.png"></img>
+        <img id="img_empty" src="img/m1_b4.png"></img>
+        <img id="img_hard" src="img/m1_b5.png"></img>
+        <img id="img_pipeTop" src="img/m1_p1.png"></img>
+        <img id="img_pipeBody" src="img/m1_p2.png"></img>
+  
+        <img id="img_mount" src="img/m1_m1.png"></img>
+        <img id="img_bush" src="img/m1_t1.png"></img>
+        <img id="img_cloud" src="img/m1_c1.png"></img>
+        <img id="img_cloud2" src="img/m1_c2.png"></img>
+        <img id="img_fort" src="img/m1_f2.png"></img>
+  
+        <img id="item1" src="img/m1_i1.png"></img>
+        <img id="item2" src="img/m1_i2.gif"></img>
+        <img id="fire1" src="img/m1_f1_1.png"></img>
+        <img id="img_coin" src="img/m1_c3.gif"></img>
+        <img id="img_flag" src="img/m1_f3.png"></img>
+        <img id="img_firework" src="img/m1_f4.gif"></img>
+
+        <img id="img_kuri1" src="img/m1_e1_1.png"></img>
+        <img id="img_kuri2" src="img/m1_e1_2.png"></img>
+        <img id="img_kame1" src="img/m1_e2_1.png"></img>
+        <img id="img_kame2" src="img/m1_e2_2.png"></img>
+        <img id="img_killer" src="img/m1_k1.png"></img>
+      </a-entity>
+
+      <a-entity class="blocks">
+        <a-mixin id="clickable_block" animation="property: object3D.position.y; dur: 100; easing: linear; loop: 1; startEvents: click; dir: alternate;"></a-mixin>
+        <a-mixin id="clickable_item"
+          animation__height="property: object3D.position.y; dur: 300; easing: easeInOutQuad; loop: 1; dir: normal; autoplay: false;"
+          animation__rotate="property: object3D.rotation.y; to: 360; dur: 300; easing: easeInOutQuad; loop: 1; dir: normal; autoplay: false;"
+          ></a-mixin>
+        <a-mixin id="hatena" geometry="primitive: box" static-body material="shader:gif;src:#img_hatena;" gif="" shadow></a-mixin>
+        <a-mixin id="hide" material="blending: subtractive; color: #222; opacity: 0; metalness: 1;" shadow></a-mixin>
+        <a-mixin id="soft" geometry="primitive: box" static-body material="src: #img_soft;" shadow></a-mixin>
+        <a-mixin id="softEffect" geometry="primitive: box; width: 0.5; height: 0.5; depth: 0.5;" material="src: #img_softEffect;" shadow></a-mixin>
+        <a-mixin id="empty" geometry="primitive: box" static-body material="src: #img_empty;" shadow></a-mixin>
+        <a-mixin id="hard" geometry="primitive: box" static-body material="src: #img_hard;" shadow></a-mixin>
+        <a-mixin id="pipeTop" geometry="primitive: cylinder; radius: 1.2; segments-radial: 8;" rotation="0 -90 0" static-body material="src: #img_pipeTop; repeat: 2 1;" shadow></a-mixin>
+        <a-mixin id="pipeBody" geometry="primitive: cylinder; height: 4; segments-radial: 8;" rotation="0 -90 0" static-body material="src: #img_pipeBody; repeat: 2 5;" shadow></a-mixin>
+      </a-entity>
+
+      <a-entity class="objects">
+        <a-mixin id="mount" geometry="primitive: plane; width: 5; height: 2;" material="src: #img_mount; transparent: true; shader: flat;"></a-mixin>
+        <a-mixin id="bush" geometry="primitive: plane; width: 2; height: 1;" shadow material="src: #img_bush; transparent: true; shader: flat;"></a-mixin>
+        <a-mixin id="cloud" geometry="primitive: plane; width: 2; height: 1.5;" material="src: #img_cloud; transparent: true; shader: flat;"></a-mixin>
+        <a-mixin id="cloud2" geometry="primitive: plane; width: 3; height: 1.5;" material="src: #img_cloud2; transparent: true; shader: flat;"></a-mixin>
+        <a-mixin id="fort" geometry="primitive: plane; width: 8; height: 8;" material="src: #img_fort; transparent: true; shader: flat;"></a-mixin>
+        <a-mixin id="flag" geometry="primitive: plane; width: 1; height: 1;" material="src: #img_flag; transparent: true; shader: flat;" animation="property: object3D.position.y; to: 4; dur: 500; loop: false; dir: normal; easing: linear; autoplay: false;"></a-mixin>
+        <a-mixin id="firework" geometry="primitive: plane; width: 1; height: 1;" material="shader:gif;src:#img_firework;" gif=""></a-mixin>
+      </a-entity>
+
+      <a-mixin id="coin" geometry="primitive: plane;" shadow material="shader:gif;src:#img_coin; transparent: true;" gif=""></a-mixin>
+      <a-mixin id="coinEffect"
+        animation__height="property: object3D.position.y; dur: 300; easing: easeInOutQuad; loop: 1; dir: normal;"
+        animation__rotate="property: object3D.rotation.y; to: 360; dur: 300; easing: easeInOutQuad; loop: 1; dir: normal;"
+        ></a-mixin>
+      <a-mixin id="fireball" geometry="primitive: sphere; radius: 0.25;" material="opacity: 0;" radius="0.25" opacity="0"></a-mixin>
+      <a-mixin id="fireballImage" geometry="primitive: plane; width: 0.5; height: 0.5;" material="src: #fire1; transparent: true; shader: flat;"
+        animation="property: object3D.rotation.z; to: -360; dur: 500; easing: linear; loop: true; dir: normal; autoplay: true;"
+      ></a-mixin>
+
+      <a-entity class="enemy">
+        <a-mixin id="kame" geometry="primitive: box;" material="opacity: 0;" static-body alongpath="rotate: true; loop: true; resetonplay: false; delay: 0; dur: 20000; triggerRadius: 1;"></a-mixin>
+        <a-mixin id="kame1" geometry="primitive: plane; height: 1.5;" material="src: #img_kame1; transparent: true;" shadow animation="property: visible; from: true; to: false; dur: 1000; loop: true; dir: alternate; easing: linear; elasticity: 0; round: true;"></a-mixin>
+        <a-mixin id="kame2" geometry="primitive: plane; height: 1.5;" material="src: #img_kame2; transparent: true;" shadow animation="property: visible; from: false; to: true; dur: 1000; loop: true; dir: alternate; easing: linear; elasticity: 0; round: true;"></a-mixin>
+        <a-mixin id="killer" geometry="primitive: plane; width: 1; height: 1;" material="src: #img_killer; transparent: true;" shadow animation="property: object3D.position.z; dur: 6000; easing: linear; loop: true; dir: normal; autoplay: false;"></a-mixin>
+        <a-mixin id="kuri" geometry="primitive: box;" material="opacity: 0;" static-body alongpath="rotate: false; loop: false; resetonplay: false; delay: 0; dur: 15000; triggerRadius: 1;"></a-mixin>
+        <a-mixin id="kuri1" geometry="primitive: plane;" material="src: #img_kuri1; transparent: true;" shadow animation="property: visible; from: true; to: false; dur: 1000; loop: true; dir: alternate; easing: linear; elasticity: 0; round: true;"></a-mixin>
+        <a-mixin id="kuri2" geometry="primitive: plane;" material="src: #img_kuri2; transparent: true;" shadow animation="property: visible; from: false; to: true; dur: 1000; loop: true; dir: alternate; easing: linear; elasticity: 0; round: true;"></a-mixin>
+      </a-entity>      
+    </a-assets>
+
+    <a-image mixin="flag" position="0 2.5 15.1" rotation="0 180 0"></a-image>
+
+    <a-image mixin="killer" position="2 1 20" rotation="0 -90 0"  visible="false" animation="to: -20; delay: 2000;"></a-image>
+    <a-image mixin="killer" position="-3 1 20" rotation="0 -90 0" visible="false" animation="to: -20; delay: 0;"></a-image>
+    <a-image mixin="killer" position="-1 4 20" rotation="0 -90 0" visible="false" animation="to: -20; delay: 4000;"></a-image>
+
+    <a-entity mixin="kuri" class="clickable kuri" alongpath="curve: #kuri_path_0; delay: 500;">
+      <a-image mixin="kuri1"></a-image>
+      <a-image mixin="kuri2"></a-image>
+    </a-entity>
+    <a-entity mixin="kuri" class="clickable kuri" alongpath="curve: #kuri_path_0; delay: 1000;">
+      <a-image mixin="kuri1"></a-image>
+      <a-image mixin="kuri2"></a-image>
+    </a-entity>
+    <a-entity mixin="kuri" class="clickable kuri" alongpath="curve: #kuri_path_0; delay: 1500;">
+      <a-image mixin="kuri1"></a-image>
+      <a-image mixin="kuri2"></a-image>
+    </a-entity>
+    <a-curve id="kuri_path_0">
+      <a-curve-point position="0 -1 16"></a-curve-point>
+      <a-curve-point position="0 -1 16"></a-curve-point>
+    </a-curve>
+    <a-curve id="kuri_path_1">
+      <a-curve-point position="0 -1 15"></a-curve-point>
+      <a-curve-point position="-2 -1 10"></a-curve-point>
+      <a-curve-point position="-2 -1 5"></a-curve-point>
+      <a-curve-point position="-1 -1 1"></a-curve-point>
+    </a-curve>
+    <a-curve id="kuri_path_3">
+      <a-curve-point position="0 -1 15"></a-curve-point>
+      <a-curve-point position="2 -1 10"></a-curve-point>
+      <a-curve-point position="2 -1 5"></a-curve-point>
+      <a-curve-point position="1 -1 1"></a-curve-point>
+    </a-curve>
+    <a-curve id="kuri_path_2">
+      <a-curve-point position="0 -1 15"></a-curve-point>
+      <a-curve-point position="0 -1 1"></a-curve-point>
+    </a-curve>
+
+    <a-entity mixin="kame" class="clickable kame" alongpath="curve: #kame_path_1;">
+      <a-entity rotation="0 90 0">
+        <a-image mixin="kame1"></a-image>
+        <a-image mixin="kame2"></a-image>
+      </a-entity>
+    </a-entity>
+    <a-curve id="kame_path_1">
+      <a-curve-point position="6 -0.75 -7"></a-curve-point>
+      <a-curve-point position="-6 -0.75 -7"></a-curve-point>
+      <a-curve-point position="6 -0.75 -7"></a-curve-point>
+    </a-curve>
+
+    <a-entity mixin="kame" class="clickable kame" alongpath="curve: #kame_path_2; dur: 12000;">
+      <a-entity rotation="0 90 0">
+        <a-image mixin="kame1"></a-image>
+        <a-image mixin="kame2"></a-image>
+      </a-entity>
+    </a-entity>
+    <a-curve id="kame_path_2" position="0 0 0">
+      <a-curve-point position="-7 0.25 6"></a-curve-point>
+      <a-curve-point position="-7 0.25 0"></a-curve-point>
+      <a-curve-point position="-7 0.25 6"></a-curve-point>
+    </a-curve>
+
+    <a-entity shadow>
+      <a-entity>
+        <a-entity mixin="soft clickable_block" class="clickable soft" position="2 3 -7" animation="to: 3.5"></a-entity>
+        <a-entity mixin="hatena clickable_block" class="clickable hatena coin" position="1 3 -7" animation="to: 3.5"></a-entity>
+        <a-entity mixin="soft clickable_block" class="clickable soft" position="0 3 -7" animation="to: 3.5"></a-entity>
+        <a-entity mixin="hatena clickable_block" class="clickable hatena mushroom" position="-1 3 -7" animation="to: 3.5"></a-entity>
+        <a-entity mixin="soft clickable_block" class="clickable soft" position="-2 3 -7" animation="to: 3.5"></a-entity>
+        <a-entity mixin="hatena clickable_block" class="clickable hatena coin" position="0 7 -7" animation="to: 7.5"></a-entity>
+  
+        <a-entity mixin="hard" position="-7 -1 -7"></a-entity>
+        <a-entity mixin="hard" position="-7 0 -7"></a-entity>
+        <a-entity mixin="hard" position="-7 1 -7"></a-entity>
+  
+        <a-entity position="8 0 -7">
+          <a-entity mixin="pipeTop" position="0 2 0"></a-entity>
+          <a-entity mixin="pipeBody" position="0 -0.5 0"></a-entity>
+        </a-entity>
+  
+        <a-entity mixin="mount" position="-8 -0.5 -15"></a-entity>
+        <a-entity mixin="bush" position="4 -1 -15"></a-entity>
+        <a-entity mixin="cloud" position="-2 10 -15"></a-entity>
+        <a-entity mixin="cloud2" position="8 7 -15"></a-entity>
+      </a-entity>
+
+      <a-entity>
+        <a-entity mixin="hatena clickable_block" class="clickable hatena flower" position="7 3 0" rotation="0 90 0" animation="to: 3.5"></a-entity>
+        <a-entity mixin="soft clickable_block" class="clickable soft" position="7 2 0" animation="to: 2.5"></a-entity>
+        <a-entity mixin="soft clickable_block" class="clickable soft" position="7 3 -1" animation="to: 3.5"></a-entity>
+        <a-entity mixin="hatena clickable_block" class="clickable hatena coin" position="7 3 1" animation="to: 3.5"></a-entity>
+
+        <a-entity mixin="soft clickable_block" class="clickable soft" position="6 3 0" animation="to: 3.5"></a-entity>
+        <a-entity mixin="soft clickable_block" class="clickable soft" position="6 2 0" animation="to: 2.5"></a-entity>
+
+        <a-entity mixin="mount" position="15 -0.5 0" rotation="0 -90 0"></a-entity>
+        <a-entity mixin="cloud" position="15 10 -4" rotation="0 -90 0"></a-entity>
+        <a-entity mixin="cloud2" position="15 7 5" rotation="0 -90 0"></a-entity>
+        <a-entity mixin="bush" position="15 -1 6" rotation="0 -90 0"></a-entity>
+        <a-entity mixin="bush" position="15 -1 -7" rotation="0 -90 0"></a-entity>
+      </a-entity>
+
+      <a-entity>
+        <a-entity mixin="hatena clickable_block hide" class="clickable hatena mushroom" position="-7 0 -1" rotation="0 90 0" animation="to: 0.5"></a-entity>
+
+        <a-entity mixin="hard" position="-7 -1 0"  rotation="0 90 0"></a-entity>
+        <a-entity mixin="hard" position="-7 -1 -1" rotation="0 90 0"></a-entity>
+        <a-entity mixin="hard" position="-7 -1 -2" rotation="0 90 0"></a-entity>
+        <a-entity mixin="hard" position="-7 -1 -3" rotation="0 90 0"></a-entity>
+        <a-entity mixin="hard" position="-7 -1 -4" rotation="0 90 0"></a-entity>
+        <a-entity mixin="hard" position="-7 -1 -5" rotation="0 90 0"></a-entity>
+        <a-entity mixin="hard" position="-7 -1 -6" rotation="0 90 0"></a-entity>
+        <a-entity mixin="hard" position="-7 0 -6" rotation="0 90 0"></a-entity>
+
+        <a-entity mixin="hard" position="-7 -1 1" rotation="0 90 0"></a-entity>
+        <a-entity mixin="hard" position="-7 -1 2" rotation="0 90 0"></a-entity>
+        <a-entity mixin="hard" position="-7 -1 3" rotation="0 90 0"></a-entity>
+        <a-entity mixin="hard" position="-7 -1 4" rotation="0 90 0"></a-entity>
+        <a-entity mixin="hard" position="-7 -1 5" rotation="0 90 0"></a-entity>
+        <a-entity mixin="hard" position="-7 -1 6" rotation="0 90 0"></a-entity>
+
+        <a-entity position="8 0 7">
+          <a-entity mixin="pipeTop" position="0 2 0"></a-entity>
+          <a-entity mixin="pipeBody" position="0 -0.5 0"></a-entity>
+        </a-entity>
+
+        <a-entity mixin="bush" position="-15 -1 6" rotation="0 90 0"></a-entity>
+        <a-entity mixin="bush" position="-15 -1 3.5" rotation="0 90 0"></a-entity>
+        <a-entity mixin="cloud" position="-15 7 -4" rotation="0 90 0"></a-entity>
+        <a-entity mixin="mount" position="-15 -0.5 -8" rotation="0 90 0"></a-entity>
+        <a-entity mixin="cloud2" position="-15 10 7" rotation="0 90 0"></a-entity>
+      </a-entity>
+
+      <a-entity>
+        <a-entity mixin="fort" position="0 2.5 15" rotation="0 180 0"></a-entity>
+        <a-entity mixin="bush" position="6 -1 15" rotation="0 180 0"></a-entity>
+        <a-entity mixin="mount" position="-8 -0.5 15" rotation="0 180 0"></a-entity>
+        <a-entity mixin="cloud" position="-3 7 15" rotation="0 180 0"></a-entity>
+        <a-entity mixin="cloud" position="4 8 15" rotation="0 180 0"></a-entity>
+      </a-entity>
+
+      <a-box static-body position="0 -2 0" src="img/m1_b3.png" width="30" height="30" depth="1" rotation="-90 0 0" repeat="30 30"></a-box>
+    </a-entity>
+    <a-sky color="rgb(80,128,255)"></a-sky>
+
+    <a-entity id="gameOver" visible="false">
+      <a-sky color="black" radius="2"></a-sky>
+      <a-text value="GAME OVER" position="0 1.6 -1" width="2" align="center"></a-text>
+      <a-text value="GAME OVER" position="0 1.6 1" width="2" align="center" rotation="0 180 0"></a-text>
+    </a-entity>
+
+    <a-entity id="gameClear" visible="false">
+      <a-sky color="black" radius="2"></a-sky>
+      <a-text value="CONGRATULATIONS!" position="0 1.6 -1" width="2" align="center"></a-text>
+      <a-text value="CONGRATULATIONS!" position="0 1.6 1" width="2" align="center" rotation="0 180 0"></a-text>
+    </a-entity>
+
+    <a-camera zoom="1" look-controls wasd-controls>
+      <a-cursor class="small" color="#fff" fuse="true"
+        raycaster="objects: .clickable;"
+        cursor="fuseTimeout: 800;"
+        animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1;"
+        animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 800; from: 1 1 1; to: 0.1 0.1 0.1;"
+        animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1;"
+      ></a-cursor>
+      <a-cursor class="mushroom" opacity="0.4" color="#fff" fuse="true" visible="false"
+        raycaster="objects: .clickable;"
+        cursor="fuseTimeout: 800;"
+        animation__mushroom="property: scale; to: 2 2 2; dur: 100; loop: 5; dir: reverse; easing: easeInOutQuad; elasticity: 0; round: true;"
+        animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 2 2 2;"
+        animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 800; from: 2 2 2; to: 0.1 0.1 0.1;"
+        animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 2 2 2;"
+      ></a-cursor>
+      <a-cursor class="flower" opacity="0.8" color="#a00" fuse="true" visible="false"
+        raycaster="objects: .clickable;"
+        cursor="fuseTimeout: 800;"
+        animation__fire="property: scale; to: 1.4 1.4 1.4; dur: 100; loop: 5; dir: reverse; easing: easeInOutQuad; elasticity: 0; round: true;"
+        animation__color="property: material.color; from: #a00; to: #f00; dur: 500; loop: true; dir: alternate; easing: easeInOutQuad; elasticity: 0; round: true;"
+        animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1.4 1.4 1.4;"
+        animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 800; from: 1.4 1.4 1.4; to: 0.1 0.1 0.1;"
+        animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1.4 1.4 1.4;"
+      ></a-cursor>
+    </a-camera>
+
+    <a-entity light="type: ambient; color: #666"></a-entity>
+    <a-entity light="type: directional; color: #FFF; intensity: 1; castShadow: true; shadowCameraTop: 10; shadowCameraRight: 10; shadowMapHeight: 32; shadowCameraTop: 32;" position="-15 20 15"></a-entity>
+  </a-scene>
+</body>
+
+</html>
